@@ -1,15 +1,22 @@
-document.addEventListener('keydown', function(event) {
-    if(event.key ==='Enter') {
-        generateQuestion();
-    }
+
+generateQuestion();
+
+document.addEventListener("DOMContentLoaded", function() {
+    let button = document.getElementById('button');
+    button.addEventListener('click', function() {
+        checkQuestion();
+        
+    })
+    
 })
 
+
+
 function runGame(){
-    generateQuestion();
-    
+  
 }
 
-function gameTImer(){
+function gameTimer(){
 
 }
 
@@ -30,15 +37,38 @@ function generateQuestion(){
 }
 
 function checkQuestion(){
+    let condition = document.getElementById('cond1');
 
+    if (condition.textContent === 'colour') {
+        checkColour();
+    } else {
+        checkWord();
+    }
 }
 
 function checkColour(){
+    let answer = document.getElementById('answer');
+    let colour = document.getElementById('cond2');
 
+    if (answer.value.toLowerCase() === colour.style.color) {
+        addScore();
+        generateQuestion();
+        console.log('check colour working if correct')
+    } else {
+        console.log('check colour working if incorrect')
+    }
 }
 
 function checkWord(){
+    let colour = document.getElementById('cond2');
 
+    if (answer.value.toLowerCase() === colour.textContent.toLowerCase()) {
+        addScore();
+        generateQuestion();
+        console.log('check word working if correct')
+    } else {
+        console.log('check word working if incorrect')
+    }
 }
 
 function addScore(){
