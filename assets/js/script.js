@@ -77,13 +77,36 @@ function checkWord(){
 function addScore(){
 
     let score = parseInt(document.getElementById('score').innerText);
-
+    
     if (easy.checked) {
         document.getElementById('score').innerText = ++score;
     } else if (normal.checked) {
         document.getElementById('score').innerText = score + 2;
     } else {
         document.getElementById('score').innerText = score +3;
+    };
+
+    let highScore = parseInt(document.getElementById('highscore').innerText);
+    let currentScore = parseInt(document.getElementById('score').innerText);
+    
+    if (currentScore >= highScore) {
+        document.getElementById('highscore').innerText = currentScore;
     }
 
+    // checkHighscore();
+}
+
+// function checkHighscore() {
+
+//     let highScore = parseInt(document.getElementById('highscore').innerText);
+//     let currentScore = parseInt(document.getElementById('score').innerText);
+    
+//     if (currentScore >= highScore) {
+//         document.getElementById('highscore').innerText = currentScore;
+//     }
+// }
+let clear = document.getElementById('test');
+    clear.addEventListener('click', clearScore);
+function clearScore() {
+    score.innerText = 0;
 }
