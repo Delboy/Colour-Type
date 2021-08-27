@@ -1,6 +1,7 @@
 
 generateQuestion();
 
+
 document.addEventListener("DOMContentLoaded", function() {
     let button = document.getElementById('button');
     button.addEventListener('click', function() {
@@ -13,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function runGame(){
-  
+    
+   
+    
 }
 
 function gameTimer(){
@@ -72,5 +75,15 @@ function checkWord(){
 }
 
 function addScore(){
+
+    let score = parseInt(document.getElementById('score').innerText);
+
+    if (easy.checked) {
+        document.getElementById('score').innerText = ++score;
+    } else if (normal.checked) {
+        document.getElementById('score').innerText = score + 2;
+    } else {
+        document.getElementById('score').innerText = score +3;
+    }
 
 }
