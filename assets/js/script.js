@@ -1,9 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let startBtn = document.getElementById('start-btn');
+    startBtn.focus();
+    startBtn.addEventListener('click', runGame);
 
-generateQuestion();
+    // let submitBtn = document.getElementById('submit-btn');
+    // submitBtn.style.visibility = 'visible';
+    // submitBtn.addEventListener('click', checkQuestion());
+})
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    let button = document.getElementById('button');
+    let button = document.getElementById('submit-btn');
     button.addEventListener('click', function() {
         checkQuestion();
         
@@ -14,12 +21,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function runGame(){
+    let submitBtn = document.getElementById('submit-btn');
+    submitBtn.style.visibility = 'visible';
+    submitBtn.focus();
+
+    let hideElements = document.getElementsByClassName('hide');
+        for (let i = 0; i < hideElements.length; i++) {
+        hideElements[i].style.visibility = 'hidden';
+}
     
+
+    generateQuestion();
+    gameTimer();
+    roundTimer();
    
     
+
+    console.log(hideElements)
 }
 
 function gameTimer(){
+
+}
+
+function roundTimer(){
 
 }
 
@@ -92,21 +117,5 @@ function addScore(){
     if (currentScore >= highScore) {
         document.getElementById('highscore').innerText = currentScore;
     }
-
-    // checkHighscore();
 }
 
-// function checkHighscore() {
-
-//     let highScore = parseInt(document.getElementById('highscore').innerText);
-//     let currentScore = parseInt(document.getElementById('score').innerText);
-    
-//     if (currentScore >= highScore) {
-//         document.getElementById('highscore').innerText = currentScore;
-//     }
-// }
-let clear = document.getElementById('test');
-    clear.addEventListener('click', clearScore);
-function clearScore() {
-    score.innerText = 0;
-}

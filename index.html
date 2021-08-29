@@ -18,7 +18,7 @@
         </p>
     </div>
 
-    <div id="difficulty-area">
+    <div id="difficulty-area" class="hide">
         <h3>Difficulty</h2>
         <label for="easy">Easy - No timer</label>
         <input type="radio" id="easy" name="difficulty">
@@ -29,10 +29,11 @@
     </div>
 
     <div id="game-area">
-        <p>Hit Enter to Start!</p>
+        <p class="hide">Hit Enter to Start!</p>
+        <button id="start-btn" class="hide">Start Game</button>
         <p id="question">Write the <span id="cond1">colour</span> <span id="cond2"> Blue</span></p>
         <input type="text" id="answer" autocomplete="off">
-        <button id="button">Submit</button>
+        <button id="submit-btn">Submit</button>
         <p>Time left: <span id="game-time">20</span> seconds</p>
     </div>
 
