@@ -2,27 +2,31 @@ document.addEventListener("DOMContentLoaded", function() {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
     startBtn.addEventListener('click', runGame);
-})
 
-
-document.addEventListener("DOMContentLoaded", function() {
     let button = document.getElementById('submit-btn');
     button.addEventListener('click', function() {
         checkQuestion();
     })
     
+    document.getElementById('answer').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            checkQuestion();
+        }
+    })
 })
 
 function runGame(){
     let submitBtn = document.getElementById('submit-btn');
     submitBtn.style.visibility = 'visible';
-    submitBtn.focus();
+    
+    document.getElementById('answer').focus();
 
     let hideElements = document.getElementsByClassName('hide');
         for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'hidden';
     }
     
+    answer.value = '';
     generateQuestion();
     gameTimer();
     roundTimer();
@@ -77,8 +81,10 @@ function checkColour(){
         generateQuestion();
         clearInterval(round);
         roundTimer();
+        document.getElementById('answer').value = '';
         console.log('check colour working if correct')
     } else {
+        document.getElementById('answer').value = '';
         console.log('check colour working if incorrect')
     }
 }
@@ -91,8 +97,10 @@ function checkWord(){
         generateQuestion();
         clearInterval(round);
         roundTimer();
+        document.getElementById('answer').value = '';
         console.log('check word working if correct')
     } else {
+        document.getElementById('answer').value = '';
         console.log('check word working if incorrect')
     }
 }
@@ -129,6 +137,9 @@ function endGame(){
         for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'visible';
     };
+
+    let startBtn = document.getElementById('start-btn');
+    startBtn.focus();
 
     clearInterval(round);
 }
