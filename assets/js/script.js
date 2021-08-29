@@ -33,8 +33,14 @@ function gameTimer(){
 }
 
 function roundTimer(){
-
+    
+    if (normal.checked) {
+        round = setInterval(generateQuestion, 4000);
+    } else if (hard.checked) {
+        round = setInterval(generateQuestion, 3000);
+    } 
 }
+
 
 function generateQuestion(){
     let conditions = ['word', 'colour'];
@@ -69,6 +75,8 @@ function checkColour(){
     if (answer.value.toLowerCase() === colour.style.color) {
         addScore();
         generateQuestion();
+        clearInterval(round);
+        roundTimer();
         console.log('check colour working if correct')
     } else {
         console.log('check colour working if incorrect')
@@ -81,6 +89,8 @@ function checkWord(){
     if (answer.value.toLowerCase() === colour.textContent.toLowerCase()) {
         addScore();
         generateQuestion();
+        clearInterval(round);
+        roundTimer();
         console.log('check word working if correct')
     } else {
         console.log('check word working if incorrect')
@@ -110,7 +120,6 @@ function addScore(){
 function endGame(){
     let score = document.getElementById('score');
     alert('well done! You\'ve scored ' + score.textContent)
-    console.log(score);
     score.textContent = 0;
 
     let submitBtn = document.getElementById('submit-btn');
@@ -119,5 +128,7 @@ function endGame(){
     let hideElements = document.getElementsByClassName('hide');
         for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'visible';
-    }
+    };
+
+    clearInterval(round);
 }
