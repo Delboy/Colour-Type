@@ -38,20 +38,31 @@ function runGame(){
 }
 
 /**
- * Starts 20 second timer. Ends game once finished.
+ * Starts 20 second timer. 
+ * Starts countdown clock.
+ * Ends game once finished.
  */
 function gameTimer(){
-    setTimeout(endGame, 20000);
+    
     clock = setInterval(countDown, 1000);
+
+    let countdown = new Audio("assets/sounds/countdown.wav");
+    countdown.play();
+    setTimeout(function(){
+        countdown.pause();
+    }, 20000);
+
+    setTimeout(endGame, 20000);
 }
 
+
+/**
+ * Takes timer and begins counting down by 1.
+ */
 function countDown(){
-    // let timer = parseInt(document.getElementById('game-time').innerText);
     let timer = parseInt(document.getElementById('game-time').innerText);
     
     document.getElementById('game-time').innerText = timer - 1;
-
-    console.log('timer', timer);
 }
 
 /**
@@ -112,10 +123,12 @@ function checkColour(){
         clearInterval(round);
         roundTimer();
         document.getElementById('answer').value = '';
-        console.log('check colour working if correct')
+        console.log('check colour working if correct');
+        correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
-        console.log('check colour working if incorrect')
+        console.log('check colour working if incorrect');
+        inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
     }
 }
 
@@ -131,10 +144,12 @@ function checkWord(){
         clearInterval(round);
         roundTimer();
         document.getElementById('answer').value = '';
-        console.log('check word working if correct')
+        console.log('check word working if correct');
+        correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
-        console.log('check word working if incorrect')
+        console.log('check word working if incorrect');
+        inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
     }
 }
 
@@ -166,9 +181,17 @@ function addScore(){
  * Alerts user of score achieved.
  */
 function endGame(){
-    let score = document.getElementById('score');
-    alert('well done! You\'ve scored ' + score.textContent)
-    score.textContent = 0;
+    let score = parseInt(document.getElementById('score').innerText);
+    let highScore = parseInt(document.getElementById('highscore').innerText);
+    
+    if (score === highScore) {
+        beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
+        } else {
+            gameEnd = new Audio("assets/sounds/win.wav").play();
+        };
+    
+    alert('well done! You\'ve scored ' + score);
+    document.getElementById('score').innerText = 0;
 
     let submitBtn = document.getElementById('submit-btn');
     submitBtn.style.visibility = 'hidden';
@@ -187,3 +210,54 @@ function endGame(){
     let timer = document.getElementById('game-time');
     timer.innerText = 20;
 }
+
+
+function winningSound(){
+    let score = parseInt(document.getElementById('score').innerText);
+    let highScore = parseInt(document.getElementById('highscore').innerText);
+    
+    if (score === highScore) {
+        beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
+        } else {
+            gameEnd = new Audio("assets/sounds/win.wav").play();
+        };
+}
+
+// function endGame(){
+//     let score = document.getElementById('score');
+//     alert('well done! You\'ve scored ' + score.textContent)
+    
+//     winningSound();
+    
+
+//     score.textContent = 0;
+
+//     let submitBtn = document.getElementById('submit-btn');
+//     submitBtn.style.visibility = 'hidden';
+
+//     let hideElements = document.getElementsByClassName('hide');
+//         for (let i = 0; i < hideElements.length; i++) {
+//         hideElements[i].style.visibility = 'visible';
+//     };
+
+//     let startBtn = document.getElementById('start-btn');
+//     startBtn.focus();
+
+//     clearInterval(round);
+//     clearInterval(clock);
+
+//     let timer = document.getElementById('game-time');
+//     timer.innerText = 20;
+// }
+
+
+// function winningSound(){
+//     let score = parseInt(document.getElementById('score').innerText);
+//     let highScore = parseInt(document.getElementById('highscore').innerText);
+    
+//     if (score === highScore) {
+//         beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
+//         } else {
+//             gameEnd = new Audio("assets/sounds/win.wav").play();
+//         };
+// }
