@@ -34,6 +34,7 @@ function runGame(){
     generateQuestion();
     gameTimer();
     roundTimer();
+    
 }
 
 /**
@@ -41,6 +42,16 @@ function runGame(){
  */
 function gameTimer(){
     setTimeout(endGame, 20000);
+    clock = setInterval(countDown, 1000);
+}
+
+function countDown(){
+    // let timer = parseInt(document.getElementById('game-time').innerText);
+    let timer = parseInt(document.getElementById('game-time').innerText);
+    
+    document.getElementById('game-time').innerText = timer - 1;
+
+    console.log('timer', timer);
 }
 
 /**
@@ -171,4 +182,8 @@ function endGame(){
     startBtn.focus();
 
     clearInterval(round);
+    clearInterval(clock);
+
+    let timer = document.getElementById('game-time');
+    timer.innerText = 20;
 }
