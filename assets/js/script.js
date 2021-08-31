@@ -1,12 +1,12 @@
+// Wait for DOM to finish loading before enabling start game button
+// Get elements for answer field and submit button and add event listeners to them
+
 document.addEventListener("DOMContentLoaded", function() {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
     startBtn.addEventListener('click', runGame);
 
-    let button = document.getElementById('submit-btn');
-    button.addEventListener('click', function() {
-        checkQuestion();
-    })
+    document.getElementById('submit-btn').addEventListener('click', checkQuestion);
     
     document.getElementById('answer').addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 })
 
+/**
+ * Starts game by generating first question and beginning game and round timers.
+ * Called when 'Start game' button clicked. 
+ */
 function runGame(){
     let submitBtn = document.getElementById('submit-btn');
     submitBtn.style.visibility = 'visible';
@@ -32,10 +36,17 @@ function runGame(){
     roundTimer();
 }
 
+/**
+ * Starts 20 second timer. Ends game once finished.
+ */
 function gameTimer(){
     setTimeout(endGame, 20000);
 }
 
+/**
+ * Starts round timer.
+ * Length of timer is set from 'difficulty' section.
+ */
 function roundTimer(){
     
     if (normal.checked) {
@@ -45,7 +56,9 @@ function roundTimer(){
     } 
 }
 
-
+/**
+ * Genrates a random condition and colour to form the next question.
+ */
 function generateQuestion(){
     let conditions = ['word', 'colour'];
     let colours = ['Red', 'Green', 'Blue', 'Yellow', 'Orange', 'Purple', 'Pink', 'Black'];
@@ -62,6 +75,9 @@ function generateQuestion(){
     colour.style.color = colours[randomStyle];
 }
 
+/**
+ * Checks for what question was generated
+ */
 function checkQuestion(){
     let condition = document.getElementById('cond1');
 
@@ -72,6 +88,9 @@ function checkQuestion(){
     }
 }
 
+/**
+ * Takes users answer and checks if its correct.
+ */
 function checkColour(){
     let answer = document.getElementById('answer');
     let colour = document.getElementById('cond2');
@@ -89,6 +108,9 @@ function checkColour(){
     }
 }
 
+/**
+ * Takes users answer and checks if its correct.
+ */
 function checkWord(){
     let colour = document.getElementById('cond2');
 
@@ -105,6 +127,10 @@ function checkWord(){
     }
 }
 
+/**
+ * Takes users score and increments it by amount determined by difficulty chosen.
+ * Updates highscore if current score exceeded it.
+ */
 function addScore(){
 
     let score = parseInt(document.getElementById('score').innerText);
@@ -125,6 +151,9 @@ function addScore(){
     }
 }
 
+/**
+ * Alerts user of score achieved.
+ */
 function endGame(){
     let score = document.getElementById('score');
     alert('well done! You\'ve scored ' + score.textContent)
