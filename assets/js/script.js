@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 })
 
+
+
+
 /**
  * Starts game by generating first question and beginning game and round timers.
  * Called when 'Start game' button clicked. 
@@ -44,16 +47,33 @@ function runGame(){
  */
 function gameTimer(){
     
+    setTimeout(endGame, 20000);
     clock = setInterval(countDown, 1000);
 
     let countdown = new Audio("assets/sounds/countdown.wav");
-    countdown.play();
+    
+    if (mute.checked) {
+        '';
+    } else {
+        countdown.play();
+    }
+
+    let muteCheckbox = document.getElementById('mute');
+
+    muteCheckbox.addEventListener('change', function(){
+        if (this.checked) {
+            countdown.pause();
+        } 
+        // else {
+        //     countdown.play();
+        // }
+    });
+
     setTimeout(function(){
         countdown.pause();
-    }, 20000);
-
-    setTimeout(endGame, 20000);
+    }, 19999) /*Set at 19999 to stop sound just before score alert pops.*/
 }
+
 
 
 /**
@@ -124,11 +144,13 @@ function checkColour(){
         roundTimer();
         document.getElementById('answer').value = '';
         console.log('check colour working if correct');
-        correctSound = new Audio("assets/sounds/correct.wav").play();
+        playSound('correct');
+        // correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
         console.log('check colour working if incorrect');
-        inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
+        // inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
+        playSound('incorrect');
     }
 }
 
@@ -145,11 +167,13 @@ function checkWord(){
         roundTimer();
         document.getElementById('answer').value = '';
         console.log('check word working if correct');
-        correctSound = new Audio("assets/sounds/correct.wav").play();
+        playSound('correct');
+        // correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
         console.log('check word working if incorrect');
-        inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
+        // inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
+        playSound('incorrect');
     }
 }
 
@@ -185,9 +209,11 @@ function endGame(){
     let highScore = parseInt(document.getElementById('highscore').innerText);
     
     if (score === highScore) {
-        beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
+        // beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
+        playSound('beatHS');
         } else {
-            gameEnd = new Audio("assets/sounds/win.wav").play();
+            // gameEnd = new Audio("assets/sounds/win.wav").play();
+            playSound('win');
         };
     
     alert('well done! You\'ve scored ' + score);
@@ -211,53 +237,16 @@ function endGame(){
     timer.innerText = 20;
 }
 
-
-function winningSound(){
-    let score = parseInt(document.getElementById('score').innerText);
-    let highScore = parseInt(document.getElementById('highscore').innerText);
-    
-    if (score === highScore) {
-        beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
-        } else {
-            gameEnd = new Audio("assets/sounds/win.wav").play();
-        };
+function playSound(x) {
+    if (mute.checked) {
+        ''
+    } else if (x === 'correct') {
+        new Audio("assets/sounds/correct.wav").play();
+    } else if (x === 'incorrect') {
+        new Audio("assets/sounds/incorrect.mp3").play();
+    } else if (x === 'win') {
+        new Audio("assets/sounds/win.wav").play();
+    } else if (x === 'beatHS') {
+        new Audio("assets/sounds/fanfare.wav").play();
+    } 
 }
-
-// function endGame(){
-//     let score = document.getElementById('score');
-//     alert('well done! You\'ve scored ' + score.textContent)
-    
-//     winningSound();
-    
-
-//     score.textContent = 0;
-
-//     let submitBtn = document.getElementById('submit-btn');
-//     submitBtn.style.visibility = 'hidden';
-
-//     let hideElements = document.getElementsByClassName('hide');
-//         for (let i = 0; i < hideElements.length; i++) {
-//         hideElements[i].style.visibility = 'visible';
-//     };
-
-//     let startBtn = document.getElementById('start-btn');
-//     startBtn.focus();
-
-//     clearInterval(round);
-//     clearInterval(clock);
-
-//     let timer = document.getElementById('game-time');
-//     timer.innerText = 20;
-// }
-
-
-// function winningSound(){
-//     let score = parseInt(document.getElementById('score').innerText);
-//     let highScore = parseInt(document.getElementById('highscore').innerText);
-    
-//     if (score === highScore) {
-//         beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
-//         } else {
-//             gameEnd = new Audio("assets/sounds/win.wav").play();
-//         };
-// }
