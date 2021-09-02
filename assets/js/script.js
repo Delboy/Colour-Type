@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
     startBtn.addEventListener('click', runGame);
-
+        
     document.getElementById('submit-btn').addEventListener('click', checkQuestion);
     
     document.getElementById('answer').addEventListener('keydown', function(event) {
@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 })
-
-
-
 
 /**
  * Starts game by generating first question and beginning game and round timers.
@@ -32,6 +29,9 @@ function runGame(){
         for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'hidden';
     }
+
+    let gameLive = document.getElementById('box');
+    gameLive.style.backgroundColor = 'green';
     
     answer.value = '';
     generateQuestion();
@@ -47,31 +47,31 @@ function runGame(){
  */
 function gameTimer(){
     
-    setTimeout(endGame, 20000);
+    setTimeout(endGame, 6000);
     clock = setInterval(countDown, 1000);
 
-    let countdown = new Audio("assets/sounds/countdown.wav");
-    
+    let timerSound = new Audio("assets/sounds/countdown.wav");
+
     if (mute.checked) {
-        '';
+            '';
     } else {
-        countdown.play();
-    }
+        timerSound.play();
+        setTimeout(function(){
+            timerSound.pause();
+            }, 19999) /*Set at 19999 to stop sound just before score alert pops.*/
+        };
 
-    let muteCheckbox = document.getElementById('mute');
-
-    muteCheckbox.addEventListener('change', function(){
-        if (this.checked) {
-            countdown.pause();
-        } 
-        // else {
-        //     countdown.play();
-        // }
-    });
-
-    setTimeout(function(){
-        countdown.pause();
-    }, 19999) /*Set at 19999 to stop sound just before score alert pops.*/
+    document.addEventListener('change', function(){
+        let muteCheckBox = document.getElementById('mute');
+        let live = document.getElementById('box');
+        if (live.style.backgroundColor === 'red') {
+            '';
+        } else if ((live.style.backgroundColor === 'green') && (muteCheckBox.checked)) {
+            timerSound.pause();
+        } else {
+            timerSound.play();
+        }
+    })
 }
 
 
@@ -226,6 +226,9 @@ function endGame(){
         for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'visible';
     };
+
+    let gameLive = document.getElementById('box');
+    gameLive.style.backgroundColor = 'red';
 
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
