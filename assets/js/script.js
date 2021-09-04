@@ -192,29 +192,23 @@ function addScore(){
     } else {
         document.getElementById('score').innerText = score +3;
     };
-
-    let highScore = parseInt(document.getElementById('highscore').innerText);
-    let currentScore = parseInt(document.getElementById('score').innerText);
-    
-    if (currentScore >= highScore) {
-        document.getElementById('highscore').innerText = currentScore;
-    }
 }
 
 /**
  * Alerts user of score achieved.
  */
 function endGame(){
-    let score = parseInt(document.getElementById('score').innerText);
+
     let highScore = parseInt(document.getElementById('highscore').innerText);
+    let score = parseInt(document.getElementById('score').innerText);
+   
     
-    if (score === highScore) {
-        // beatHighScore = new Audio("assets/sounds/fanfare.wav").play();
+    if (score > highScore) {
+        document.getElementById('highscore').innerText = score;
         playSound('beatHS');
-        } else {
-            // gameEnd = new Audio("assets/sounds/win.wav").play();
-            playSound('win');
-        };
+    } else {
+        playSound('win');
+    }
     
     alert('well done! You\'ve scored ' + score);
     document.getElementById('score').innerText = 0;
