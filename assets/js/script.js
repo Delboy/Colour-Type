@@ -49,35 +49,7 @@ function gameTimer(){
     
     setTimeout(endGame, 20000);
     clock = setInterval(countDown, 1000);
-
-    let timerSound = new Audio("assets/sounds/countdown.wav");
-
-    if (mute.checked) {
-            '';
-    } else {
-        timerSound.play();
-        setTimeout(function(){
-            timerSound.pause();
-            }, 19999) /*Set at 19999 to stop sound just before score alert pops.*/
-        };
-
-    document.addEventListener('change', function(){
-        let muteCheckBox = document.getElementById('mute');
-        let live = document.getElementById('box');
-        if (live.style.backgroundColor === 'red') {
-            '';
-        } else if ((live.style.backgroundColor === 'green') && (muteCheckBox.checked)) {
-            timerSound.pause();
-            timerSound.currentTime = 0;
-        } else {
-            timerSound.play();
-            let timeLeft = parseInt(document.getElementById('game-time').innerText);
-            console.log(timeLeft);
-            setTimeout(function(){
-                timerSound.pause();
-                }, `${timeLeft}000`);
-        }
-    })
+    playSound('countdown');
 }
 
 /**
@@ -249,5 +221,30 @@ function playSound(x) {
         new Audio("assets/sounds/win.wav").play();
     } else if (x === 'beatHS') {
         new Audio("assets/sounds/fanfare.wav").play();
-    } 
+    } else if (x === 'countdown') {
+        let timerSound = new Audio("assets/sounds/countdown.wav");
+
+        timerSound.play();
+        setTimeout(function(){
+            timerSound.pause();
+            }, 19999) /*Set at 19999 to stop sound just before score alert pops.*/
+
+    document.addEventListener('change', function(){
+        let muteCheckBox = document.getElementById('mute');
+        let live = document.getElementById('box');
+        if (live.style.backgroundColor === 'red') {
+            '';
+        } else if ((live.style.backgroundColor === 'green') && (muteCheckBox.checked)) {
+            timerSound.pause();
+            timerSound.currentTime = 0;
+        } else {
+            timerSound.play();
+            let timeLeft = parseInt(document.getElementById('game-time').innerText);
+            console.log(timeLeft);
+            setTimeout(function(){
+                timerSound.pause();
+                }, `${timeLeft}000`);
+        }
+    })
+    }
 }
