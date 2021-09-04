@@ -47,7 +47,7 @@ function runGame(){
  */
 function gameTimer(){
     
-    setTimeout(endGame, 6000);
+    setTimeout(endGame, 20000);
     clock = setInterval(countDown, 1000);
 
     let timerSound = new Audio("assets/sounds/countdown.wav");
@@ -68,13 +68,17 @@ function gameTimer(){
             '';
         } else if ((live.style.backgroundColor === 'green') && (muteCheckBox.checked)) {
             timerSound.pause();
+            timerSound.currentTime = 0;
         } else {
             timerSound.play();
+            let timeLeft = parseInt(document.getElementById('game-time').innerText);
+            console.log(timeLeft);
+            setTimeout(function(){
+                timerSound.pause();
+                }, `${timeLeft}000`);
         }
     })
 }
-
-
 
 /**
  * Takes timer and begins counting down by 1.
