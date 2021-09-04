@@ -18,7 +18,7 @@
         </p>
     </div>
 
-    <div id="difficulty-area" class="hide">
+    <div id="options-area" class="hide">
         <h3>Difficulty</h2>
         <label for="easy">Easy - No timer</label>
         <input type="radio" id="easy" name="difficulty">
@@ -26,6 +26,9 @@
         <input type="radio" id="normal"name="difficulty" checked>
         <label for="hard">Hard - 3 second timer </label>
         <input type="radio" id="hard" name="difficulty">
+
+        <label for="mute">Mute</label>
+        <input type="checkbox" id="mute" name="mute" checked>
     </div>
 
     <div id="game-area">
@@ -43,8 +46,10 @@
         <p>High Score: <span id="highscore">00</span></p>
     </div>
 
-    <label for="mute">Mute</label>
-    <input type="checkbox" id="mute" name="mute" checked>
+    <div id="feedback-area">
+        <p id="feedback"></p>
+    </div>
+    
     
     <script src="assets/js/script.js"></script>
 </body>

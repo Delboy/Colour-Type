@@ -91,7 +91,7 @@ function countDown(){
 
 /**
  * Starts round timer.
- * Length of timer is set from 'difficulty' section.
+ * Length of timer is set from 'options' section.
  */
 function roundTimer(){
     
