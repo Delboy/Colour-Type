@@ -53,7 +53,7 @@ function runGame(){
  */
 function gameTimer(){
     
-    setTimeout(endGame, 20000);
+    setTimeout(endGame, 10000);
     clock = setInterval(countDown, 1000);
     playSound('countdown');
 }
@@ -183,16 +183,18 @@ function endGame(){
 
     let highScore = parseInt(document.getElementById('highscore').innerText);
     let score = parseInt(document.getElementById('score').innerText);
-   
+    let feedback = document.getElementById('feedback');
     
     if (score > highScore) {
         document.getElementById('highscore').innerText = score;
         playSound('beatHS');
+        feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.`;
     } else {
         playSound('win');
-    }
+        feedback.innerText = "Well Done! You scored " + `${score}` + ". Try again to beat your highscore of " + `${highScore}.`;
+    };
     
-    alert('well done! You\'ve scored ' + score);
+    // alert('well done! You\'ve scored ' + score);
     document.getElementById('score').innerText = 0;
 
     let submitBtn = document.getElementById('submit-btn');
