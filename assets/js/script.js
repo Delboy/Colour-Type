@@ -8,9 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
         
     document.getElementById('submit-btn').addEventListener('click', checkQuestion);
     
+    let gameLive = document.getElementById('box'); 
+
     document.getElementById('answer').addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
+        if ((event.key === 'Enter') && (gameLive.style.backgroundColor === 'green')) {
             checkQuestion();
+            console.log('enter and green');
+        } else if (event.key === 'Enter') {
+            runGame();
+            console.log('enter');
         }
     })
 })
