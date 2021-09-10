@@ -67,7 +67,7 @@ function countDown(){
     
     document.getElementById('game-time').innerText = timer - 1;
 
-    playSound('tick');
+    playSound('tick.wav');
 }
 
 /**
@@ -129,13 +129,13 @@ function checkColour(){
         roundTimer();
         document.getElementById('answer').value = '';
         console.log('check colour working if correct');
-        playSound('correct');
+        playSound('correct.wav');
         // correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
         console.log('check colour working if incorrect');
         // inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
-        playSound('incorrect');
+        playSound('incorrect.mp3');
     }
 }
 
@@ -152,13 +152,13 @@ function checkWord(){
         roundTimer();
         document.getElementById('answer').value = '';
         console.log('check word working if correct');
-        playSound('correct');
+        playSound('correct.wav');
         // correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
         console.log('check word working if incorrect');
         // inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
-        playSound('incorrect');
+        playSound('incorrect.mp3');
     }
 }
 
@@ -190,10 +190,10 @@ function endGame(){
     
     if (score > highScore) {
         document.getElementById('highscore').innerText = score;
-        playSound('beatHS');
+        playSound('fanfare.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.`;
     } else {
-        playSound('win');
+        playSound('win.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Try again to beat your highscore of " + `${highScore}.`;
     };
     
@@ -224,16 +224,8 @@ function endGame(){
 function playSound(x) {
     if (mute.checked) {
         '';
-    } else if (x === 'correct') {
-        new Audio("assets/sounds/correct.wav").play();
-    } else if (x === 'incorrect') {
-        new Audio("assets/sounds/incorrect.mp3").play();
-    } else if (x === 'win') {
-        new Audio("assets/sounds/win.wav").play();
-    } else if (x === 'beatHS') {
-        new Audio("assets/sounds/fanfare.wav").play();
-    } else if (x === 'tick') {
-            new Audio("assets/sounds/tick.wav").play();
+    } else {
+        new Audio("assets/sounds/" + x).play();
     }
 }
         
