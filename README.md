@@ -10,6 +10,7 @@ Type colour is a game written in pure Javascript that plays on 'The Stroop Effec
 
 ## Features
 - __Title__
+- This areas simply displays the name of the game.
 - __Rule Area__
 - The rule area explains the rules of the game, giving two examples to aid the user.
 - __Options Area__

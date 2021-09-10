@@ -54,7 +54,6 @@ function runGame(){
  * Ends game once finished.
  */
 function gameTimer(){
-    
     setTimeout(endGame, 20000);
     clock = setInterval(countDown, 1000);
 }
@@ -64,9 +63,7 @@ function gameTimer(){
  */
 function countDown(){
     let timer = parseInt(document.getElementById('game-time').innerText);
-    
     document.getElementById('game-time').innerText = timer - 1;
-
     playSound('tick.wav');
 }
 
@@ -75,7 +72,6 @@ function countDown(){
  * Length of timer is set from 'options' section.
  */
 function roundTimer(){
-    
     if (normal.checked) {
         round = setInterval(generateQuestion, 4000);
     } else if (hard.checked) {
@@ -106,8 +102,8 @@ function generateQuestion(){
  * Checks for what question was generated
  */
 function checkQuestion(){
-    let condition = document.getElementById('cond1');
 
+    let condition = document.getElementById('cond1');
     if (condition.textContent === 'colour') {
         checkColour();
     } else {
@@ -119,6 +115,7 @@ function checkQuestion(){
  * Takes users answer and checks if its correct.
  */
 function checkColour(){
+
     let answer = document.getElementById('answer');
     let colour = document.getElementById('cond2');
 
@@ -130,11 +127,9 @@ function checkColour(){
         document.getElementById('answer').value = '';
         console.log('check colour working if correct');
         playSound('correct.wav');
-        // correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
         console.log('check colour working if incorrect');
-        // inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
         playSound('incorrect.mp3');
     }
 }
@@ -143,6 +138,7 @@ function checkColour(){
  * Takes users answer and checks if its correct.
  */
 function checkWord(){
+
     let colour = document.getElementById('cond2');
 
     if (answer.value.toLowerCase() === colour.textContent.toLowerCase()) {
@@ -153,11 +149,9 @@ function checkWord(){
         document.getElementById('answer').value = '';
         console.log('check word working if correct');
         playSound('correct.wav');
-        // correctSound = new Audio("assets/sounds/correct.wav").play();
     } else {
         document.getElementById('answer').value = '';
         console.log('check word working if incorrect');
-        // inCorrectSound = new Audio("assets/sounds/incorrect.mp3").play();
         playSound('incorrect.mp3');
     }
 }
@@ -197,7 +191,6 @@ function endGame(){
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Try again to beat your highscore of " + `${highScore}.`;
     };
     
-    // alert('well done! You\'ve scored ' + score);
     document.getElementById('score').innerText = 0;
 
     let submitBtn = document.getElementById('submit-btn');
@@ -221,6 +214,9 @@ function endGame(){
     timer.innerText = 20;
 }
 
+/**
+ * Plays sound effect
+ */
 function playSound(x) {
     if (mute.checked) {
         '';
