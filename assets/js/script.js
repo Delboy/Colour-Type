@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     startBtn.addEventListener('click', runGame);
         
     document.getElementById('submit-btn').addEventListener('click', checkQuestion);
+
+    document.getElementById('mute').addEventListener('click', mute);
     
     let gameLive = document.getElementById('box'); 
 
@@ -53,9 +55,8 @@ function runGame(){
  */
 function gameTimer(){
     
-    setTimeout(endGame, 10000);
+    setTimeout(endGame, 20000);
     clock = setInterval(countDown, 1000);
-    playSound('countdown');
 }
 
 /**
@@ -65,6 +66,8 @@ function countDown(){
     let timer = parseInt(document.getElementById('game-time').innerText);
     
     document.getElementById('game-time').innerText = timer - 1;
+
+    playSound('tick');
 }
 
 /**
@@ -220,7 +223,7 @@ function endGame(){
 
 function playSound(x) {
     if (mute.checked) {
-        ''
+        '';
     } else if (x === 'correct') {
         new Audio("assets/sounds/correct.wav").play();
     } else if (x === 'incorrect') {
@@ -229,30 +232,9 @@ function playSound(x) {
         new Audio("assets/sounds/win.wav").play();
     } else if (x === 'beatHS') {
         new Audio("assets/sounds/fanfare.wav").play();
-    } else if (x === 'countdown') {
-        let timerSound = new Audio("assets/sounds/countdown.wav");
-
-        timerSound.play();
-        setTimeout(function(){
-            timerSound.pause();
-            }, 19999) /*Set at 19999 to stop sound just before score alert pops.*/
-
-    document.addEventListener('change', function(){
-        let muteCheckBox = document.getElementById('mute');
-        let live = document.getElementById('box');
-        if (live.style.backgroundColor === 'red') {
-            '';
-        } else if ((live.style.backgroundColor === 'green') && (muteCheckBox.checked)) {
-            timerSound.pause();
-            timerSound.currentTime = 0;
-        } else {
-            timerSound.play();
-            let timeLeft = parseInt(document.getElementById('game-time').innerText);
-            console.log(timeLeft);
-            setTimeout(function(){
-                timerSound.pause();
-                }, `${timeLeft}000`);
-        }
-    })
+    } else if (x === 'tick') {
+            new Audio("assets/sounds/tick.wav").play();
     }
 }
+        
+
