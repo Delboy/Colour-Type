@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 body {
     background-color: slategray;
+    font-family:'indie flower', sans-serif ;
 }
 
 #submit-btn {
@@ -7,8 +10,8 @@ body {
 }
 
 #box {
-    height: 50px;
-    width: 50px;
+    height: 0px;
+    width: 0px;
     background-color: red;
 }
 
