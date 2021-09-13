@@ -34,3 +34,4 @@ Type colour is a game written in pure Javascript that plays on 'The Stroop Effec
 ## Credits
 - I learned how to add audio from [this] thread (https://stackoverflow.com/questions/9419263/how-to-play-audio) on stackoverflow.com.
 - All sounds were sourced from [Freesounds.org](https://freesound.org/).
+- Clipboard pic was sourced from https://www.subpng.com/png-co8iji/download.html.
