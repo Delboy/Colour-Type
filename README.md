@@ -1,5 +1,5 @@
 # Colour Type
-Type colour is a game written in pure Javascript that plays on 'The Stroop Effect'. The Stroop effect is our tendency to experience difficulty naming a physical color when it is used to spell the name of a different color.
+Colour Type is a game written in pure Javascript that plays on 'The Stroop Effect'. The Stroop effect is our tendency to experience difficulty naming a physical color when it is used to spell the name of a different color.
 
 ## Design
 - __Colour Scheme__
