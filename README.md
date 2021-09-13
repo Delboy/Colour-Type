@@ -3,11 +3,11 @@ Type colour is a game written in pure Javascript that plays on 'The Stroop Effec
 
 ## Design
 - __Colour Scheme__
-    - 
+    - I wanted to keep the colour scheme plain and simple as to not distract the user from the colouring of the question word.
 - __Typography__
-    - 
+    - The game only uses the font 'indie flower' as it has a chalkboard like handwritting quality which gives the page a game like feel. Sans sarif was used as a fall back font incase of any problems loading the page.
 - __Wireframes__
-
+    ![image](wireframes/colour-type.png)
 ## Features
 - __Title__
 - This areas simply displays the name of the game.
