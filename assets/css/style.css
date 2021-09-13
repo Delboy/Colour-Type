@@ -44,6 +44,16 @@ h1 {
     color: orange;
 }
 
+#options-area {
+    width: 700px;
+    height: 300px;
+    margin: 1em 0 0 3em;
+    font-size: 1.25em;
+    padding: 1.5em;
+    background: url(../images/box.png)no-repeat;
+    background-size: 700px 300px;
+}
+
 #submit-btn {
     visibility: hidden;
 }
