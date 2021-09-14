@@ -187,10 +187,10 @@ function endGame(){
     if (score > highScore) {
         document.getElementById('highscore').innerText = score;
         playSound('fanfare.wav');
-        feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.`;
+        feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
     } else {
         playSound('win.wav');
-        feedback.innerText = "Well Done! You scored " + `${score}` + ". Try again to beat your highscore of " + `${highScore}.`;
+        feedback.innerText = "Well Done! You scored " + `${score}` + ". Try again to beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
     };
     
     document.getElementById('score').innerText = 0;

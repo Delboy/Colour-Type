@@ -15,10 +15,11 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 7em;
     text-align: center;
-    margin-top: 10px;
+    margin: 25px 0;
 }
+
 
 #rule-area {
     width: 600px;
@@ -47,7 +48,7 @@ h1 {
 #options-area {
     width: 700px;
     height: 150px;
-    margin: 1em 0 0 3em;
+    margin: 1em 0 0 6em;
     font-size: 1.25em;
     padding: 1.5em;
     background: url(../images/box.png)no-repeat;
@@ -92,7 +93,6 @@ h1 {
 #answer {
     font-size: 1.5em;
     font-family: inherit;
-    margin-left: .7em;
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
@@ -107,9 +107,29 @@ h1 {
     margin-right: 1em;
 }
 
-#submit-btn {
+#feedback-area {
     visibility: hidden;
+    height: 400px;
+    width: 600px;
+    border-radius: 5px;
+    background: url(../images/box.png)no-repeat;
+    background-size: 600px 400px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+#feedback {
+    font-size: 3em;
+    padding: 1em;
+    text-align: center;
+}
+
+/* #submit-btn {
+    visibility: hidden;
+} */
 
 #box {
     height: 0px;
