@@ -27,7 +27,7 @@ h1 {
     background: url(../images/clipboard.png);
     background-size: cover;
     float: right;
-    margin-right: 2em;
+    margin-right: 5em;
     text-align: center;
 }
 
@@ -131,6 +131,13 @@ h1 {
     text-align: center;
 }
 
+#exit {
+    font-size: 2em;
+    float: right;
+    position: absolute;
+    right: 35px;
+    top: 5px;
+}
 /* #submit-btn {
     visibility: hidden;
 } */

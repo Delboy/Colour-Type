@@ -214,6 +214,11 @@ function endGame(){
 
     let timer = document.getElementById('game-time');
     timer.innerText = 20;
+
+    let endMessage = document.getElementById('feedback-area');
+    let exit = document.getElementById('exit').addEventListener('click', function(){
+            endMessage.style.visibility = 'hidden';
+    })
 }
 
 /**
