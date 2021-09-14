@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     startBtn.focus();
     startBtn.addEventListener('click', runGame);
         
-    document.getElementById('submit-btn').addEventListener('click', checkQuestion);
+    // document.getElementById('submit-btn').addEventListener('click', checkQuestion);
 
     document.getElementById('mute').addEventListener('click', mute);
     
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
  * Called when 'Start game' button clicked. 
  */
 function runGame(){
-    let submitBtn = document.getElementById('submit-btn');
-    submitBtn.style.visibility = 'visible';
+    // let submitBtn = document.getElementById('submit-btn');
+    // submitBtn.style.visibility = 'visible';
     
     document.getElementById('answer').focus();
 
@@ -195,8 +195,8 @@ function endGame(){
     
     document.getElementById('score').innerText = 0;
 
-    let submitBtn = document.getElementById('submit-btn');
-    submitBtn.style.visibility = 'hidden';
+    // let submitBtn = document.getElementById('submit-btn');
+    // submitBtn.style.visibility = 'hidden';
 
     let hideElements = document.getElementsByClassName('hide');
         for (let i = 0; i < hideElements.length; i++) {
