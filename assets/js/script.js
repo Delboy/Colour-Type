@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
     startBtn.addEventListener('click', runGame);
+
+    let options = document.getElementsByClassName('option');
+    
+    for (let option of options) {
+        option.addEventListener('click', function(){
+            startBtn.focus();
+        })}
+    
         
     // document.getElementById('submit-btn').addEventListener('click', checkQuestion);
 
