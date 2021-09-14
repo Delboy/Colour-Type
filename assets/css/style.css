@@ -18,6 +18,16 @@ h1 {
     font-size: 7em;
     text-align: center;
     margin: 25px 0;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    animation: color-change 10s infinite;
+}
+
+@keyframes color-change {
+  0% { color: rgb(241, 107, 107); }
+  33% { color: rgb(122, 196, 245); }
+  66% { color: rgb(125, 243, 109); }
+  100% { color: rgb(241, 107, 107); }
+  
 }
 
 
