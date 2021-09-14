@@ -47,12 +47,12 @@ h1 {
 
 #options-area {
     width: 700px;
-    height: 150px;
-    margin: 1em 0 0 6em;
-    font-size: 1.25em;
+    height: 250px;
+    margin: 1em 0 0 5em;
+    font-size: 1.4em;
     padding: 1.5em;
     background: url(../images/box.png)no-repeat;
-    background-size: 700px 150px;
+    background-size: 700px 250px;
 }
 
 #mute-area {
@@ -63,6 +63,10 @@ h1 {
 #difficulty input {
     margin-right: 1em;
     margin-top: 1.5em;
+}
+
+#points {
+    margin-top: .5em;
 }
 
 #game-area {
