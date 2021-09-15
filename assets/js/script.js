@@ -191,7 +191,10 @@ function endGame(){
     let score = parseInt(document.getElementById('score').innerText);
     let feedback = document.getElementById('feedback');
     
-    if (score > highScore) {
+    if (score === 0) {
+        playSound('lose.wav');
+        feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Hit enter to try again."
+    } else if (score > highScore) {
         document.getElementById('highscore').innerText = score;
         playSound('fanfare.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
