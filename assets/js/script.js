@@ -43,7 +43,14 @@ function runGame(){
     let hideElements = document.getElementsByClassName('hide');
         for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'hidden';
-    }
+    };
+
+    let disable = document.getElementsByClassName('disable');
+    for (let i = 0; i < disable.length; i++) {
+        disable[i].disabled = true;
+    };
+
+    document.getElementById("easy").disabled = true;
 
     let gameLive = document.getElementById('box');
     gameLive.style.backgroundColor = 'green';
@@ -211,6 +218,11 @@ function endGame(){
     let hideElements = document.getElementsByClassName('hide');
         for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'visible';
+    };
+
+    let disable = document.getElementsByClassName('disable');
+    for (let i = 0; i < disable.length; i++) {
+        disable[i].disabled = false;
     };
 
     let gameLive = document.getElementById('box');

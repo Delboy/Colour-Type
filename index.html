@@ -23,22 +23,22 @@
             <label for="mute">Mute</label>
             <input type="checkbox" id="mute" class="option" name="mute" checked>
         </div>
-        <div id="difficulty" class="hide">
+        <div id="difficulty">
             <h3>Difficulty :</h3>
             <label for="easy">Easy - No timer</label>
-            <input type="radio" id="easy" class="option" name="difficulty">
+            <input type="radio" id="easy" class="option disable" name="difficulty">
             <label for="normal" >Normal - 4 sec timer</label>
-            <input type="radio" id="normal" class="option" name="difficulty" checked>
+            <input type="radio" id="normal" class="option disable" name="difficulty" checked>
             <label for="hard">Hard - 2 sec timer </label>
-            <input type="radio" id="hard" class="option" name="difficulty">
+            <input type="radio" id="hard" class="option disable" name="difficulty">
             <p id="points">Easy awards 1 point per correct answer.<br> Normal awards 2 points per correct answer.<br> Hard awards 3 points per correct answer.</p>
         </div>   
         
     </div>
 
     <div id="game-area">
-        <p class="hide">Hit Enter to Start!</p>
-        <button id="start-btn" class="hide">Start Game</button>
+        <p>Hit Enter to Start!</p>
+        <button id="start-btn" class="disable">Start Game</button>
         <p id="question">Write the <span id="cond1">colour</span> <span id="cond2"> Blue</span></p>
         <input type="text" id="answer" autocomplete="off">
         <!-- <button id="submit-btn">Submit</button> -->
