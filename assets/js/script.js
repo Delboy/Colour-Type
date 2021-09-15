@@ -82,7 +82,7 @@ function roundTimer(){
     if (normal.checked) {
         round = setInterval(generateQuestion, 4000);
     } else if (hard.checked) {
-        round = setInterval(generateQuestion, 3000);
+        round = setInterval(generateQuestion, 2000);
     } else {
         round = setInterval(generateQuestion, 20000);
     }
