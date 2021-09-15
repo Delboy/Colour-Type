@@ -7,16 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
     startBtn.addEventListener('click', runGame);
 
     let options = document.getElementsByClassName('option');
+    let answer = document.getElementById('answer');
     
     for (let option of options) {
         option.addEventListener('click', function(){
-            startBtn.focus();
+            answer.focus();
         })}
     
         
     // document.getElementById('submit-btn').addEventListener('click', checkQuestion);
-
-    document.getElementById('mute').addEventListener('click', mute);
     
     let gameLive = document.getElementById('box'); 
 
@@ -198,7 +197,7 @@ function endGame(){
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
     } else {
         playSound('win.wav');
-        feedback.innerText = "Well Done! You scored " + `${score}` + ". Try again to beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
+        feedback.innerText = "Well Done! You scored " + `${score}` + ". Hit enter to try again and beat your highscore of " + `${highScore}.`;
     };
     
     document.getElementById('score').innerText = 0;
@@ -224,8 +223,10 @@ function endGame(){
     timer.innerText = 20;
 
     let endMessage = document.getElementById('feedback-area');
+    let answer = document.getElementById('answer');
     let exit = document.getElementById('exit').addEventListener('click', function(){
             endMessage.style.visibility = 'hidden';
+            answer.focus();
     })
 }
 

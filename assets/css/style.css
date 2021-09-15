@@ -60,7 +60,7 @@ h1 {
     height: 250px;
     margin: 1em 0 0 5em;
     font-size: 1.4em;
-    padding: 1.5em;
+    padding: 1.5em 1.5em 0;
     background: url(../images/box.png)no-repeat;
     background-size: 700px 250px;
 }
@@ -102,6 +102,10 @@ h1 {
 #question {
     margin-top: .5em;
     font-size: 1.5em;
+}
+
+#cond2 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #answer {
@@ -147,6 +151,7 @@ h1 {
     position: absolute;
     right: 35px;
     top: 5px;
+    cursor: pointer;
 }
 /* #submit-btn {
     visibility: hidden;
