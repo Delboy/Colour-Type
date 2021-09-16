@@ -87,7 +87,7 @@ h1 {
 }
 
 #options-area {
-    height: 250px;
+    height: 225px;
     font-size: 1.4em;
     padding: 1.5em 0 0 1.5em;
     background: url(../images/box.png)no-repeat;
@@ -198,7 +198,7 @@ footer {
    #rule-area {
     visibility: hidden;
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-left: 0;
@@ -207,5 +207,11 @@ footer {
    #rule-dropbox {
     visibility: visible;
     }
+}
 
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 3em;
+    
+    }
 }
