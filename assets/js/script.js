@@ -14,7 +14,29 @@ document.addEventListener("DOMContentLoaded", function() {
             answer.focus();
         })}
     
-        
+    let rulesExit = document.getElementById('rules-exit');
+    let rules = document.getElementById('rule-area');
+    let ruleDropBox = document.getElementsByClassName('fas fa-chevron-down')[0].addEventListener('click', function(){
+        rules.style.visibility = 'visible';
+        rulesExit.style.visibility = 'visible';
+    })
+
+    rulesExit.addEventListener('click', function(){
+        rules.style.visibility = 'hidden';
+        rulesExit.style.visibility = "hidden";
+    })
+
+    window.addEventListener('resize', function(){
+        if (this.window.innerWidth > 1490) {
+            rules.style.visibility = 'visible';
+            rulesExit.style.visibility = 'hidden'; 
+        } else {
+            rules.style.visibility = 'hidden';
+            rulesExit.style.visibility = 'hidden';
+        }
+    });
+    
+
     // document.getElementById('submit-btn').addEventListener('click', checkQuestion);
     
     let gameLive = document.getElementById('box'); 
@@ -239,7 +261,7 @@ function endGame(){
 
     let endMessage = document.getElementById('feedback-area');
     let answer = document.getElementById('answer');
-    let exit = document.getElementById('exit').addEventListener('click', function(){
+    let exit = document.getElementById('feedback-exit').addEventListener('click', function(){
             endMessage.style.visibility = 'hidden';
             answer.focus();
     })
