@@ -188,6 +188,12 @@ h1 {
     background-color: red;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 1.25em;;
+}
+
 @media screen and (max-width: 1490px) {
    #rule-area {
     visibility: hidden;
