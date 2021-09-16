@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 /* defualts */
-
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +11,7 @@
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: white;
     font-family:'indie flower', sans-serif ;
 }
@@ -24,6 +24,7 @@ body {
 #left-flex {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
@@ -42,10 +43,10 @@ h1 {
   
 }
 
-
 #rule-area {
     width: 600px;
     height: 800px;
+    margin-left: 1em;
     background: url(../images/clipboard.png);
     background-size: cover;
     text-align: center;
@@ -65,11 +66,20 @@ h1 {
     color: orange;
 }
 
+#rule-dropbox {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    visibility: hidden;
+}
+
+
+
 #options-area {
-    width: 700px;
     height: 250px;
     font-size: 1.4em;
-    padding: 1.5em 1.5em 0;
+    padding: 1.5em 0 0 1.5em;
     background: url(../images/box.png)no-repeat;
     background-size: 700px 250px;
 }
@@ -161,9 +171,6 @@ h1 {
     top: 5px;
     cursor: pointer;
 }
-/* #submit-btn {
-    visibility: hidden;
-} */
 
 #box {
     height: 0px;
@@ -171,3 +178,16 @@ h1 {
     background-color: red;
 }
 
+@media screen and (max-width: 1490px) {
+   #rule-area {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+
+   #rule-dropbox {
+    visibility: visible;
+}
+}
