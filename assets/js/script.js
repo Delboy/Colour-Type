@@ -17,9 +17,19 @@ document.addEventListener("DOMContentLoaded", function() {
     let rulesExit = document.getElementById('rules-exit');
     let rules = document.getElementById('rule-area');
     let ruleDropBox = document.getElementsByClassName('fas fa-chevron-down')[0].addEventListener('click', function(){
+        if (window.innerWidth > 700){
         rules.style.visibility = 'visible';
         rulesExit.style.visibility = 'visible';
+        } else {
+            rules.style.visibility = 'visible';
+        }
     })
+
+    if (window.innerWidth <= 700){
+        rules.addEventListener('click', function(){
+            rules.style.visibility = 'hidden';
+        })
+    }
 
     rulesExit.addEventListener('click', function(){
         rules.style.visibility = 'hidden';

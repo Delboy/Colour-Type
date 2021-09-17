@@ -47,7 +47,7 @@ h1 {
     width: 600px;
     height: 800px;
     margin-left: 1em;
-    background: url(../images/clipboard.png);
+    background: url(../images/clipboard.png)no-repeat;
     background-size: cover;
     text-align: center;
 }
@@ -277,19 +277,29 @@ footer {
     }
 
     #rule-area {
-        width: 340px;
-        height: 475px;
-        background-size: 340px 475px;
+        cursor: pointer;
+        width: 90%;
+        height: 75%;
+        background-size: 100% 475px;
         margin: -10px;
-        
+        z-index: 10;
         position: fixed;
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
+    #rule-area h2 {
+        padding-top: 15%;
+    }
+
+    #rules {
+        padding: 0 10% 0 20%;
+        text-align: center;
+    }
+
     #rules-exit {
-        left: 15em;
+        visibility: hidden;
     }
 
     #footer {
