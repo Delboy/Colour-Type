@@ -183,6 +183,7 @@ function checkColour(){
         document.getElementById('answer').value = '';
         console.log('check colour working if incorrect');
         playSound('incorrect.mp3');
+        flashScreen();
     }
 }
 
@@ -205,6 +206,7 @@ function checkWord(){
         document.getElementById('answer').value = '';
         console.log('check word working if incorrect');
         playSound('incorrect.mp3');
+        flashScreen();
     }
 }
 
@@ -291,5 +293,14 @@ function playSound(x) {
         new Audio("assets/sounds/" + x).play();
     }
 }
-        
 
+/**
+ * Flashes screen red for split second.
+ */
+function flashScreen() {
+    let body = document.getElementsByTagName('body')[0];
+    body.style.backgroundColor = 'red';
+    setTimeout(function(){
+        body.style.backgroundColor = '';
+    },50)
+}
