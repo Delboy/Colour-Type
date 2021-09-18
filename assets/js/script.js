@@ -1,61 +1,62 @@
 // Wait for DOM to finish loading before enabling start game button
 // Get elements for answer field and submit button and add event listeners to them
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
     startBtn.addEventListener('click', runGame);
 
     let options = document.getElementsByClassName('option');
     let answer = document.getElementById('answer');
-    
+
     for (let option of options) {
-        option.addEventListener('click', function(){
+        option.addEventListener('click', function () {
             answer.focus();
-        })}
-    
+        })
+    }
+
     let rulesExit = document.getElementById('rules-exit');
     let rules = document.getElementById('rule-area');
-    let ruleDropBox = document.getElementsByClassName('fas fa-chevron-down')[0].addEventListener('click', function(){
-        if (window.innerWidth > 700){
-        rules.style.visibility = 'visible';
-        rulesExit.style.visibility = 'visible';
+    let ruleDropBox = document.getElementsByClassName('fas fa-chevron-down')[0].addEventListener('click', function () {
+        if (window.innerWidth > 700) {
+            rules.style.visibility = 'visible';
+            rulesExit.style.visibility = 'visible';
         } else {
             rules.style.visibility = 'visible';
         }
     })
 
-    if (window.innerWidth <= 700){
-        rules.addEventListener('click', function(){
+    if (window.innerWidth <= 700) {
+        rules.addEventListener('click', function () {
             rules.style.visibility = 'hidden';
         })
         let feedback = document.getElementById('feedback-area');
-        feedback.addEventListener('click', function(){
+        feedback.addEventListener('click', function () {
             feedback.style.visibility = 'hidden';
         })
     }
 
-    rulesExit.addEventListener('click', function(){
+    rulesExit.addEventListener('click', function () {
         rules.style.visibility = 'hidden';
         rulesExit.style.visibility = "hidden";
     })
 
-    window.addEventListener('resize', function(){
+    window.addEventListener('resize', function () {
         if (this.window.innerWidth > 1490) {
             rules.style.visibility = 'visible';
-            rulesExit.style.visibility = 'hidden'; 
+            rulesExit.style.visibility = 'hidden';
         } else {
             rules.style.visibility = 'hidden';
             rulesExit.style.visibility = 'hidden';
         }
     });
-    
+
 
     // document.getElementById('submit-btn').addEventListener('click', checkQuestion);
-    
-    let gameLive = document.getElementById('box'); 
 
-    document.getElementById('answer').addEventListener('keydown', function(event) {
+    let gameLive = document.getElementById('box');
+
+    document.getElementById('answer').addEventListener('keydown', function (event) {
         if ((event.key === 'Enter') && (gameLive.style.backgroundColor === 'green')) {
             checkQuestion();
             console.log('enter and green');
@@ -70,14 +71,14 @@ document.addEventListener("DOMContentLoaded", function() {
  * Starts game by generating first question and beginning game and round timers.
  * Called when 'Start game' button clicked. 
  */
-function runGame(){
+function runGame() {
     // let submitBtn = document.getElementById('submit-btn');
     // submitBtn.style.visibility = 'visible';
-    
+
     document.getElementById('answer').focus();
 
     let hideElements = document.getElementsByClassName('hide');
-        for (let i = 0; i < hideElements.length; i++) {
+    for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'hidden';
     };
 
@@ -90,12 +91,12 @@ function runGame(){
 
     let gameLive = document.getElementById('box');
     gameLive.style.backgroundColor = 'green';
-    
+
     answer.value = '';
     generateQuestion();
     gameTimer();
     roundTimer();
-    
+
 }
 
 /**
@@ -103,7 +104,7 @@ function runGame(){
  * Starts countdown clock.
  * Ends game once finished.
  */
-function gameTimer(){
+function gameTimer() {
     setTimeout(endGame, 20000);
     clock = setInterval(countDown, 1000);
 }
@@ -111,7 +112,7 @@ function gameTimer(){
 /**
  * Takes timer and begins counting down by 1.
  */
-function countDown(){
+function countDown() {
     let timer = parseInt(document.getElementById('game-time').innerText);
     document.getElementById('game-time').innerText = timer - 1;
     playSound('tick.wav');
@@ -121,7 +122,7 @@ function countDown(){
  * Starts round timer.
  * Length of timer is set from 'options' section.
  */
-function roundTimer(){
+function roundTimer() {
     if (normal.checked) {
         round = setInterval(generateQuestion, 4000);
     } else if (hard.checked) {
@@ -134,7 +135,7 @@ function roundTimer(){
 /**
  * Genrates a random condition and colour to form the next question.
  */
-function generateQuestion(){
+function generateQuestion() {
     let conditions = ['word', 'colour'];
     let colours = ['Red', 'Green', 'Blue', 'Yellow', 'Orange', 'Purple', 'Pink', 'Black'];
 
@@ -153,7 +154,7 @@ function generateQuestion(){
 /**
  * Checks for what question was generated
  */
-function checkQuestion(){
+function checkQuestion() {
 
     let condition = document.getElementById('cond1');
     if (condition.textContent === 'colour') {
@@ -166,7 +167,7 @@ function checkQuestion(){
 /**
  * Takes users answer and checks if its correct.
  */
-function checkColour(){
+function checkColour() {
 
     let answer = document.getElementById('answer');
     let colour = document.getElementById('cond2');
@@ -183,14 +184,14 @@ function checkColour(){
         document.getElementById('answer').value = '';
         console.log('check colour working if incorrect');
         playSound('incorrect.mp3');
-        flashScreen();
+        flash();
     }
 }
 
 /**
  * Takes users answer and checks if its correct.
  */
-function checkWord(){
+function checkWord() {
 
     let colour = document.getElementById('cond2');
 
@@ -206,7 +207,7 @@ function checkWord(){
         document.getElementById('answer').value = '';
         console.log('check word working if incorrect');
         playSound('incorrect.mp3');
-        flashScreen();
+        flash();
     }
 }
 
@@ -214,28 +215,28 @@ function checkWord(){
  * Takes users score and increments it by amount determined by difficulty chosen.
  * Updates highscore if current score exceeded it.
  */
-function addScore(){
+function addScore() {
 
     let score = parseInt(document.getElementById('score').innerText);
-    
+
     if (easy.checked) {
         document.getElementById('score').innerText = ++score;
     } else if (normal.checked) {
         document.getElementById('score').innerText = score + 2;
     } else {
-        document.getElementById('score').innerText = score +3;
+        document.getElementById('score').innerText = score + 3;
     };
 }
 
 /**
  * Alerts user of score achieved.
  */
-function endGame(){
+function endGame() {
 
     let highScore = parseInt(document.getElementById('highscore').innerText);
     let score = parseInt(document.getElementById('score').innerText);
     let feedback = document.getElementById('feedback');
-    
+
     if (score === 0) {
         playSound('lose.wav');
         feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Hit enter to try again."
@@ -247,14 +248,14 @@ function endGame(){
         playSound('win.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Hit enter to try again and beat your highscore of " + `${highScore}.`;
     };
-    
+
     document.getElementById('score').innerText = 0;
 
     // let submitBtn = document.getElementById('submit-btn');
     // submitBtn.style.visibility = 'hidden';
 
     let hideElements = document.getElementsByClassName('hide');
-        for (let i = 0; i < hideElements.length; i++) {
+    for (let i = 0; i < hideElements.length; i++) {
         hideElements[i].style.visibility = 'visible';
     };
 
@@ -277,9 +278,9 @@ function endGame(){
 
     let endMessage = document.getElementById('feedback-area');
     let answer = document.getElementById('answer');
-    let exit = document.getElementById('feedback-exit').addEventListener('click', function(){
-            endMessage.style.visibility = 'hidden';
-            answer.focus();
+    let exit = document.getElementById('feedback-exit').addEventListener('click', function () {
+        endMessage.style.visibility = 'hidden';
+        answer.focus();
     })
 }
 
@@ -295,12 +296,12 @@ function playSound(x) {
 }
 
 /**
- * Flashes screen red for split second.
+ * Flashes answer box red for split second.
  */
-function flashScreen() {
-    let body = document.getElementsByTagName('body')[0];
-    body.style.backgroundColor = 'red';
-    setTimeout(function(){
-        body.style.backgroundColor = '';
-    },50)
+function flash() {
+    let answer = document.getElementById('answer');
+    answer.style.backgroundColor = 'red';
+    setTimeout(function () {
+        answer.style.backgroundColor = '';
+    }, 50);
 }
