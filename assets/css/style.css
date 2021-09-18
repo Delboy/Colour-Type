@@ -244,13 +244,11 @@ footer {
         font-size: 60%;
     }
 
-    #main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 10px;;
+    #left-flex {
+        width: 100%;
+        margin-left: 10px;
     }
-
+    
     .fa-chevron-down {
         margin-top: 3px;
     }
@@ -274,15 +272,18 @@ footer {
     #mute-area {
         position: relative;
         top: 20px;
-        left: 10px;
     }
 
     #game-area {
-        margin: 0;
+        margin: 0 10px 0 0;
         padding-top: 20px;
         background-size: 97% 300px;
         height: 300px;
         width: 100%;
+    }
+
+    #question, #answer {
+        margin-right: 10px;;
     }
 
     #rule-area {
@@ -320,10 +321,13 @@ footer {
     }
 
     #feedback-area {
-        height: 150px;
+        height: 210px;
         width: 100%;
-        background-size: 100% 150px;;
+        background-size: 100% 210px;
     }
 
+    #feedback {
+        padding: 1em 1em 0;
+    }
    
 }
