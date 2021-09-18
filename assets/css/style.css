@@ -213,6 +213,10 @@ footer {
     visibility: visible;
     }
 
+    .fa-chevron-down {
+        margin-top: 5px;
+    }
+
     #left-flex {
         font-size: 80%;
     }
@@ -245,6 +249,10 @@ footer {
         flex-direction: column;
         justify-content: center;
         margin-left: 10px;;
+    }
+
+    .fa-chevron-down {
+        margin-top: 3px;
     }
 
     #options-area {
