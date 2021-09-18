@@ -285,7 +285,7 @@ footer {
     #game-area {
         margin: 0 10px 0 0;
         padding-top: 20px;
-        background-size: 97% 300px;
+        background-size: 97% 310px;
         height: 300px;
         width: 100%;
     }
@@ -337,7 +337,7 @@ footer {
     }
 
     #feedback {
-        padding: 1em 1em 0;
+        padding: .75em 1em 0;
     }
 
     #feedback-exit {
