@@ -29,6 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
         rules.addEventListener('click', function(){
             rules.style.visibility = 'hidden';
         })
+        let feedback = document.getElementById('feedback-area');
+        feedback.addEventListener('click', function(){
+            feedback.style.visibility = 'hidden';
+        })
     }
 
     rulesExit.addEventListener('click', function(){
