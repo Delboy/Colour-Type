@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('enter and green');
         } else if (event.key === 'Enter') {
             runGame();
+            main.style.opacity = '100%';
             console.log('enter');
         }
     })
@@ -75,8 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
  * Called when 'Start game' button clicked. 
  */
 function runGame() {
-    // let submitBtn = document.getElementById('submit-btn');
-    // submitBtn.style.visibility = 'visible';
+
+    let main = document.getElementById('main');
+    main.style.opacity = '100%';
+    main.style.animation = '';
 
     document.getElementById('answer').focus();
 
@@ -240,6 +243,7 @@ function endGame() {
     let score = parseInt(document.getElementById('score').innerText);
     let feedback = document.getElementById('feedback');
     let main = document.getElementById('main');
+    
 
     if (score === 0) {
         playSound('lose.wav');
@@ -293,14 +297,6 @@ function endGame() {
         main.style.animation = '';
         answer.focus();
     })
-    
-    
-
-    // let body = document.getElementsByTagName('body')[0];
-    // endMessage.style.opacity = '100%';
-    // body.style.opacity = '30%';
-
-
 }
 
 /**
