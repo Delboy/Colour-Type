@@ -21,8 +21,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
+
+.background-animation {
+    animation: background-color-change 1s infinite;
+}
+
+@keyframes background-color-change {
+    0% { background-color: rgb(241, 107, 107); }
+    33% { background-color: rgb(122, 196, 245); }
+    66% { background-color: rgb(125, 243, 109); }
+    100% { background-color: rgb(241, 107, 107); }
+  }
 
 #flex {
     display: flex;

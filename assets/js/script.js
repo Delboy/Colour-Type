@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         feedback.addEventListener('click', function () {
             feedback.style.visibility = 'hidden';
             main.style.opacity = '100%';
+            main.style.animation = '';
         })
     }
 
@@ -238,17 +239,21 @@ function endGame() {
     let highScore = parseInt(document.getElementById('highscore').innerText);
     let score = parseInt(document.getElementById('score').innerText);
     let feedback = document.getElementById('feedback');
+    let main = document.getElementById('main');
 
     if (score === 0) {
         playSound('lose.wav');
         feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Hit enter to try again."
+        main.style.opacity = '30%';
     } else if (score > highScore) {
         document.getElementById('highscore').innerText = score;
         playSound('fanfare.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
+        main.style.animation = 'background-color-change 1s infinite';
     } else {
         playSound('win.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Hit enter to try again and beat your highscore of " + `${highScore}.`;
+        main.style.opacity = '30%';
     };
 
     document.getElementById('score').innerText = 0;
@@ -278,14 +283,14 @@ function endGame() {
     let timer = document.getElementById('game-time');
     timer.innerText = 20;
 
-    let main = document.getElementById('main');
-    main.style.opacity = '30%';
+    
 
     let endMessage = document.getElementById('feedback-area');
     let answer = document.getElementById('answer');
     let exit = document.getElementById('feedback-exit').addEventListener('click', function () {
         endMessage.style.visibility = 'hidden';
         main.style.opacity = '100%';
+        main.style.animation = '';
         answer.focus();
     })
     
