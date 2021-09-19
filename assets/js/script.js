@@ -31,8 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
             rules.style.visibility = 'hidden';
         })
         let feedback = document.getElementById('feedback-area');
+        let main = document.getElementById('main');
         feedback.addEventListener('click', function () {
             feedback.style.visibility = 'hidden';
+            main.style.opacity = '100%';
         })
     }
 
@@ -276,12 +278,24 @@ function endGame() {
     let timer = document.getElementById('game-time');
     timer.innerText = 20;
 
+    let main = document.getElementById('main');
+    main.style.opacity = '30%';
+
     let endMessage = document.getElementById('feedback-area');
     let answer = document.getElementById('answer');
     let exit = document.getElementById('feedback-exit').addEventListener('click', function () {
         endMessage.style.visibility = 'hidden';
+        main.style.opacity = '100%';
         answer.focus();
     })
+    
+    
+
+    // let body = document.getElementsByTagName('body')[0];
+    // endMessage.style.opacity = '100%';
+    // body.style.opacity = '30%';
+
+
 }
 
 /**
