@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 /* defualts */
-*{
+* {
     margin: 0;
     padding: 0;
     border: none;
@@ -14,25 +14,8 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: white;
-    font-family:'indie flower', sans-serif ;
+    font-family: 'indie flower', sans-serif;
 }
-
-#main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.background-animation {
-    animation: background-color-change 1s infinite;
-}
-
-@keyframes background-color-change {
-    0% { background-color: rgb(241, 107, 107); }
-    33% { background-color: rgb(122, 196, 245); }
-    66% { background-color: rgb(125, 243, 109); }
-    100% { background-color: rgb(241, 107, 107); }
-  }
 
 #flex {
     display: flex;
@@ -46,6 +29,7 @@ body {
     justify-content: center;
 }
 
+/* Header */
 h1 {
     font-size: 5em;
     text-align: center;
@@ -54,14 +38,27 @@ h1 {
     animation: color-change 10s infinite;
 }
 
+/* Animation for header colour change */
 @keyframes color-change {
-  0% { color: rgb(241, 107, 107); }
-  33% { color: rgb(122, 196, 245); }
-  66% { color: rgb(125, 243, 109); }
-  100% { color: rgb(241, 107, 107); }
-  
+    0% {
+        color: rgb(241, 107, 107);
+    }
+
+    33% {
+        color: rgb(122, 196, 245);
+    }
+
+    66% {
+        color: rgb(125, 243, 109);
+    }
+
+    100% {
+        color: rgb(241, 107, 107);
+    }
+
 }
 
+/* Rules*/
 #rule-area {
     width: 600px;
     height: 800px;
@@ -86,7 +83,8 @@ h1 {
     height: fit-content;
     width: fit-content;
     cursor: pointer;
-    font-size: 2em;;
+    font-size: 2em;
+    ;
     position: relative;
     top: 4em;
     left: 16em;
@@ -105,6 +103,7 @@ h1 {
     cursor: pointer;
 }
 
+/* Options Box*/
 #options-area {
     height: 225px;
     font-size: 1.4em;
@@ -123,7 +122,7 @@ h1 {
     margin-top: 1.5em;
 }
 
-ul li{
+ul li {
     display: inline;
 }
 
@@ -131,6 +130,7 @@ ul li{
     margin-top: .5em;
 }
 
+/* Game Box*/
 #game-area {
     width: 700px;
     height: 600px;
@@ -142,12 +142,12 @@ ul li{
 }
 
 #start-btn {
-        font-family: 'Indie Flower';
-        font-size: 1em;
-        box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
-        padding: .2em;
-        border: 2px solid black;
-        border-radius: 5px;
+    font-family: 'Indie Flower';
+    font-size: 1em;
+    box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
+    padding: .2em;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 #start-btn:hover {
@@ -176,11 +176,13 @@ ul li{
 #timer {
     margin-top: 1em;
 }
+
 .score {
     display: inline-block;
     margin-right: 1em;
 }
 
+/* Feedback */
 #feedback-area {
     visibility: hidden;
     height: 400px;
@@ -213,12 +215,33 @@ ul li{
     cursor: pointer;
 }
 
+/* Animation for background when highscore beaten */
+@keyframes background-color-change {
+    0% {
+        background-color: rgb(241, 107, 107);
+    }
+
+    33% {
+        background-color: rgb(122, 196, 245);
+    }
+
+    66% {
+        background-color: rgb(125, 243, 109);
+    }
+
+    100% {
+        background-color: rgb(241, 107, 107);
+    }
+}
+
+/* Invisible box. Used in script to determine if game is running */
 #box {
     height: 0px;
     width: 0px;
     background-color: red;
 }
 
+/* footer */
 footer {
     display: flex;
     justify-content: center;
@@ -229,33 +252,40 @@ footer {
     color: black;
 }
 
+/* Media Queries */
+
 @media screen and (max-width: 1490px) {
-   #rule-area {
-    visibility: hidden;
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-left: 0;
-   }
 
-   #rule-dropbox {
-    visibility: visible;
-    }
-
-    .fa-chevron-down {
-        margin-top: 5px;
-    }
-
+    /* defaults */
     #left-flex {
         font-size: 80%;
     }
 
+    /* Rules */
+    .fa-chevron-down {
+        margin-top: 5px;
+    }
+
+    #rule-area {
+        visibility: hidden;
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 0;
+    }
+
+    #rule-dropbox {
+        visibility: visible;
+    }
+
+    /* Options Box*/
     #options-area {
         background-size: 700px 205px;
         height: 205px;
     }
 
+    /* Game Box*/
     #game-area {
         background-size: 700px 500px;
         height: 500px;
@@ -263,6 +293,8 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+
+    /* Defaults */
     h1 {
         font-size: 5em;
     }
@@ -278,49 +310,14 @@ footer {
         width: 100%;
         margin-left: 10px;
     }
-    
+
+    /* Rules */
     #rule-dropbox {
         font-size: 3em;
     }
 
     .fa-chevron-down {
         margin-top: 3px;
-    }
-
-    #options-area {
-        padding: 0;
-        background-size: 97% 260px;
-        width: 100%;
-        height: 270px;
-        font-size: 2em;
-    }
-
-    #difficulty {
-        margin: 20px 0 0 25px;
-    }
-
-    ul li {
-        display: block;
-    }
-
-    #mute-area {
-        position: relative;
-        top: 20px;
-    }
-
-    #game-area {
-        margin: 0 10px 0 0;
-        padding-top: 20px;
-        background-size: 97% 310px;
-        height: 300px;
-        width: 100%;
-    }
-
-    #cond2 {
-        font-size: 1.5em;;
-    }
-    #question, #answer {
-        margin-right: 10px;;
     }
 
     #rule-area {
@@ -348,14 +345,58 @@ footer {
         visibility: hidden;
     }
 
-    #footer {
-        display: block;
+    /* Options Box*/
+    #options-area {
+        padding: 0;
+        background-size: 97% 260px;
+        width: 100%;
+        height: 270px;
+        font-size: 2em;
+    }
+
+    #mute-area {
+        position: relative;
+        top: 20px;
+    }
+
+    #difficulty {
+        margin: 20px 0 0 25px;
     }
 
     #difficulty input {
         margin-right: 0;
     }
 
+    ul li {
+        display: block;
+    }
+
+    /* Game Box*/
+    #game-area {
+        margin: 0 10px 0 0;
+        padding-top: 20px;
+        background-size: 97% 310px;
+        height: 300px;
+        width: 100%;
+    }
+
+    #cond2 {
+        font-size: 1.5em;
+        ;
+    }
+
+    #question,
+    #answer {
+        margin-right: 10px;
+        ;
+    }
+
+    /* Footer */
+    #footer {
+        display: block;
+    }
+
+    /* Feedback */
     #feedback-area {
         height: 210px;
         width: 100%;
