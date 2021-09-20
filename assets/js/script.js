@@ -100,7 +100,7 @@ function runGame() {
  * Ends game once finished.
  */
 function gameTimer() {
-    setTimeout(endGame, 20000);
+    setTimeout(endGame, 2000);
     clock = setInterval(countDown, 1000);
 }
 
@@ -222,17 +222,20 @@ function addScore() {
 /**
  * Ends game.
  * Alerts user of score achieved.
- * Updates scores.
  * Resets timers.
  */
 function endGame() {
     let highScore = parseInt(document.getElementById('highscore').innerText);
     let score = parseInt(document.getElementById('score').innerText);
     let feedback = document.getElementById('feedback');
+    let feedbackArea = document.getElementById('feedback-area');
     let main = document.getElementById('main');
     let answer = document.getElementById('answer');
 
     answer.blur();
+
+    // Checks score and displays corrosponding feedback message. 
+    feedbackArea.style.visibility = 'visible';
 
     if (score === 0) {
         playSound('lose.wav');
@@ -252,56 +255,48 @@ function endGame() {
         main.style.opacity = '30%';
     };
 
-    document.getElementById('score').innerText = 0;
-
-    let hideElements = document.getElementsByClassName('hide');
-    for (let i = 0; i < hideElements.length; i++) {
-        hideElements[i].style.visibility = 'visible';
-    };
-
-    let disable = document.getElementsByClassName('disable');
-    for (let i = 0; i < disable.length; i++) {
-        disable[i].disabled = false;
-    };
-
-    let gameLive = document.getElementById('box');
-    gameLive.style.backgroundColor = 'red';
-
-
-    clearInterval(round);
-    clearInterval(clock);
-
-    let timer = document.getElementById('game-time');
-    timer.innerText = 20;
-
-
-
-    let endMessage = document.getElementById('feedback-area');
+    // Closes feedback box when clicked or enter pressed
     document.getElementById('feedback-exit').addEventListener('click', function () {
-        endMessage.style.visibility = 'hidden';
+        feedbackArea.style.visibility = 'hidden';
         main.style.opacity = '100%';
         main.style.animation = '';
         answer.focus();
     })
 
-    let feedbackArea = document.getElementById('feedback-area');
-        
-        feedbackArea.addEventListener('click', function () {
-            feedbackArea.style.visibility = 'hidden';
-            main.style.opacity = '100%';
-            main.style.animation = '';
-        })
-
+    feedbackArea.addEventListener('click', function () {
+        feedbackArea.style.visibility = 'hidden';
+        main.style.opacity = '100%';
+        main.style.animation = '';
+    })
 
     window.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
-            endMessage.style.visibility = 'hidden';
+            feedbackArea.style.visibility = 'hidden';
             main.style.opacity = '100%';
             main.style.animation = '';
-            clearTimeout(opacityTimer);
             answer.focus();
+            clearTimeout(opacityTimer);
         }
     })
+
+    // Resets score
+    document.getElementById('score').innerText = 0;
+
+    // Enables options
+    let disable = document.getElementsByClassName('disable');
+    for (let i = 0; i < disable.length; i++) {
+        disable[i].disabled = false;
+    };
+
+    // Changes box to red to indicate game not running
+    let gameLive = document.getElementById('box');
+    gameLive.style.backgroundColor = 'red';
+
+    // Clears timers
+    clearInterval(round);
+    clearInterval(clock);
+    let timer = document.getElementById('game-time');
+    timer.innerText = 20;
 }
 
 /**
