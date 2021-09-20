@@ -193,12 +193,15 @@ ul li{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #feedback {
     font-size: 3em;
-    padding: 1em;
     text-align: center;
+    padding: 0 1em;
 }
 
 #feedback-exit {
@@ -357,10 +360,6 @@ footer {
         height: 210px;
         width: 100%;
         background-size: 100% 210px;
-    }
-
-    #feedback {
-        padding: .75em 1em 0;
     }
 
     #feedback-exit {
