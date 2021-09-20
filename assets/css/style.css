@@ -84,7 +84,6 @@ h1 {
     width: fit-content;
     cursor: pointer;
     font-size: 2em;
-    ;
     position: relative;
     top: 4em;
     left: 16em;
@@ -100,6 +99,9 @@ h1 {
     justify-content: center;
     margin-bottom: 20px;
     visibility: hidden;
+}
+
+.fa-chevron-down {
     cursor: pointer;
 }
 
