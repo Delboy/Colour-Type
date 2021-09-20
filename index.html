@@ -10,73 +10,84 @@
 </head>
 
 <body>
-    
+
     <div id="main">
+        <!-- Header -->
         <h1>COLOUR TYPE</h1>
         <div id="flex">
-        <div id="rule-area">
-            <p id="rules-exit">x</p>
-            <h2>The Rules</h2>
-            <p id="rules"> The game is simple. You will be asked whether to type in the colour of a word or the word
-                itself.
-                <br>For example, the correct answer to <br>'Write the <u>colour</u> <span id='eg'>Blue</span>'<br> would
-                be Orange, where as;<br> 'Write the <u>word</u> <span id='eg'>Blue</span>'<br> would be Blue.
-                <br>You have 20 seconds to score as many as possible. Changing difficulty effects how long you have to
-                answer each question before it changes but awards more points for higher difficulties. Good luck!
-            </p>
-        </div>
 
-        <div id="left-flex">
-            <p id="rule-dropbox">How to play&nbsp;<i class="fas fa-chevron-down"></i></p>
-            <div id="options-area">
-                <div id="mute-area">
-                    <label for="mute">Mute</label>
-                    <input type="checkbox" id="mute" class="option" name="mute" checked>
-                </div>
-                <div id="difficulty">
-                    <h3>Difficulty :</h3>
-                    <ul id="difficulty-options">
-                        <li><label for="easy">Easy - No timer</label>
-                            <input type="radio" id="easy" class="option disable" name="difficulty"></li>
-                        <li></li><label for="normal">Normal - 4 sec timer</label>
-                        <input type="radio" id="normal" class="option disable" name="difficulty" checked></li>
-                        <li></li><label for="hard">Hard - 2 sec timer </label>
-                        <input type="radio" id="hard" class="option disable" name="difficulty"></li>
-                    </ul>
-                    <p id="points">Easy awards 1 point per correct answer.<br> Normal awards 2 points per correct
-                        answer.<br> Hard awards 3 points per correct answer.</p>
-                </div>
-
+            <!-- Rules Area -->
+            <div id="rule-area">
+                <p id="rules-exit">x</p>
+                <h2>The Rules</h2>
+                <p id="rules"> The game is simple. You will be asked whether to type in the colour of a word or the word
+                    itself.
+                    <br>For example, the correct answer to <br>'Write the <u>colour</u> <span id='eg'>Blue</span>'<br>
+                    would
+                    be Orange, where as;<br> 'Write the <u>word</u> <span id='eg'>Blue</span>'<br> would be Blue.
+                    <br>You have 20 seconds to score as many as possible. Changing difficulty effects how long you have
+                    to
+                    answer each question before it changes but awards more points for higher difficulties. Good luck!
+                </p>
             </div>
 
-            <div id="game-area">
-                <p>Hit Enter to Start!</p>
-                <button id="start-btn" class="disable">Start Game</button>
-                <p id="question">Write the <span id="cond1">colour</span> <span id="cond2"> Blue</span></p>
-                <input type="text" id="answer" autocomplete="off">
-                <!-- <button id="submit-btn">Submit</button> -->
-                <p id="timer">Time left: <span id="game-time">20</span> seconds</p>
-                <div id="score-area">
-                    <p class="score">Current Score: <span id="score">00</span></p>
-                    <p class="score">High Score: <span id="highscore">00</span></p>
+            <!-- Boxes on left side of page -->
+            <div id="left-flex">
+                <p id="rule-dropbox">How to play&nbsp;<i class="fas fa-chevron-down"></i></p>
+
+                <!-- Options box -->
+                <div id="options-area">
+                    <!-- Sound options -->
+                    <div id="mute-area">
+                        <label for="mute">Mute</label>
+                        <input type="checkbox" id="mute" class="option" name="mute" checked>
+                    </div>
+                    <!-- Difficutly options -->
+                    <div id="difficulty">
+                        <h3>Difficulty :</h3>
+                        <ul id="difficulty-options">
+                            <li><label for="easy">Easy - No timer</label>
+                                <input type="radio" id="easy" class="option disable" name="difficulty"></li>
+                            <li></li><label for="normal">Normal - 4 sec timer</label>
+                            <input type="radio" id="normal" class="option disable" name="difficulty" checked></li>
+                            <li></li><label for="hard">Hard - 2 sec timer </label>
+                            <input type="radio" id="hard" class="option disable" name="difficulty"></li>
+                        </ul>
+                        <p id="points">Easy awards 1 point per correct answer.<br> Normal awards 2 points per correct
+                            answer.<br> Hard awards 3 points per correct answer.</p>
+                    </div>
+                </div>
+
+                <!-- Main game area -->
+                <div id="game-area">
+                    <p>Hit Enter to Start!</p>
+                    <button id="start-btn" class="disable">Start Game</button>
+                    <p id="question">Write the <span id="cond1">colour</span> <span id="cond2"> Blue</span></p>
+                    <input type="text" id="answer" autocomplete="off">
+                    <p id="timer">Time left: <span id="game-time">20</span> seconds</p>
+                    <div id="score-area">
+                        <p class="score">Current Score: <span id="score">00</span></p>
+                        <p class="score">High Score: <span id="highscore">00</span></p>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+
+        <!-- Footer with github link -->
         <footer>
             Created by Derek de Goey&nbsp;<a href="https://github.com/Delboy" target="_blank"><i
                     class="fab fa-github"></i></a>
         </footer>
     </div>
-    
 
+    <!-- Feedback area -->
     <div id="feedback-area" class="hide">
         <p id="feedback-exit">x</p>
         <p id="feedback"></p>
     </div>
     <div id="box"></div>
-    
 
+    <!-- Scripts -->
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/a02791d223.js" crossorigin="anonymous"></script>
 </body>
