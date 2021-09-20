@@ -67,27 +67,20 @@ document.addEventListener("DOMContentLoaded", function () {
  * Called when 'Start game' button clicked or enter key pressed. 
  */
 function runGame() {
-    let main = document.getElementById('main');
-    main.style.opacity = '100%';
-    main.style.animation = '';
-
+    
     document.getElementById('answer').focus();
 
-    let hideElements = document.getElementsByClassName('hide');
-    for (let i = 0; i < hideElements.length; i++) {
-        hideElements[i].style.visibility = 'hidden';
-    };
-
+    // disable options
     let disable = document.getElementsByClassName('disable');
     for (let i = 0; i < disable.length; i++) {
         disable[i].disabled = true;
     };
 
-    document.getElementById("easy").disabled = true;
-
+    // Change box to green indicating game is live
     let gameLive = document.getElementById('box');
     gameLive.style.backgroundColor = 'green';
 
+    // Generate first question and start timers
     answer.value = '';
     generateQuestion();
     gameTimer();
@@ -100,7 +93,7 @@ function runGame() {
  * Ends game once finished.
  */
 function gameTimer() {
-    setTimeout(endGame, 2000);
+    setTimeout(endGame, 20000);
     clock = setInterval(countDown, 1000);
 }
 
