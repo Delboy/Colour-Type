@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Called when 'Start game' button clicked or enter key pressed. 
  */
 function runGame() {
-    
+
     document.getElementById('answer').focus();
 
     // disable options
@@ -256,11 +256,13 @@ function endGame() {
         answer.focus();
     })
 
-    feedbackArea.addEventListener('click', function () {
-        feedbackArea.style.visibility = 'hidden';
-        main.style.opacity = '100%';
-        main.style.animation = '';
-    })
+    if (window.innerWidth < 700) {
+        feedbackArea.addEventListener('click', function () {
+            feedbackArea.style.visibility = 'hidden';
+            main.style.opacity = '100%';
+            main.style.animation = '';
+        })
+    }
 
     window.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
