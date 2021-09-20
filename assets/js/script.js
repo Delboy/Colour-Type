@@ -249,19 +249,19 @@ function endGame() {
 
     if (score === 0) {
         playSound('lose.wav');
-        feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Please try again."
+        feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Why not try again?"
         main.style.opacity = '30%';
     } else if (score > highScore) {
         document.getElementById('highscore').innerText = score;
         playSound('fanfare.wav');
-        feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Try again to score even higher!";
+        feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Why not try again to score even higher!";
         main.style.animation = 'background-color-change 500ms 4';
         setTimeout(function () {
             main.style.opacity = '30%'
         }, 2000)
     } else {
         playSound('win.wav');
-        feedback.innerText = "Well Done! You scored " + `${score}` + ". Please try again to beat your highscore of " + `${highScore}.`;
+        feedback.innerText = "Well Done! You scored " + `${score}` + ". Why not try again to beat your highscore of " + `${highScore}.`;
         main.style.opacity = '30%';
     };
 
