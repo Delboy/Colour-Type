@@ -6,15 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
     startBtn.focus();
     startBtn.addEventListener('click', runGame);
 
+    // Refocuses Answer field after options changed
     let options = document.getElementsByClassName('option');
     let answer = document.getElementById('answer');
-
     for (let option of options) {
         option.addEventListener('click', function () {
             answer.focus();
         })
     }
 
+    // Opens rules when cheveron clicked
     let rulesExit = document.getElementById('rules-exit');
     let rules = document.getElementById('rule-area');
     let ruleDropBox = document.getElementsByClassName('fas fa-chevron-down')[0].addEventListener('click', function () {
@@ -26,24 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    if (window.innerWidth <= 700) {
-        rules.addEventListener('click', function () {
-            rules.style.visibility = 'hidden';
-        })
-        let feedback = document.getElementById('feedback-area');
-        let main = document.getElementById('main');
-        feedback.addEventListener('click', function () {
-            feedback.style.visibility = 'hidden';
-            main.style.opacity = '100%';
-            main.style.animation = '';
-        })
-    }
-
+    //Closes rules when 'x' clicked
     rulesExit.addEventListener('click', function () {
         rules.style.visibility = 'hidden';
         rulesExit.style.visibility = "hidden";
     })
+    // If viewed on phone touch anywhere on rules to close
+    if (window.innerWidth <= 700) {
+        rules.addEventListener('click', function () {
+            rules.style.visibility = 'hidden';
+        })
+    }
 
+    // Keeps rules visible if window resized while rules showing
     window.addEventListener('resize', function () {
         if (this.window.innerWidth > 1490) {
             rules.style.visibility = 'visible';
@@ -54,29 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
-    // document.getElementById('submit-btn').addEventListener('click', checkQuestion);
-
+    // Event listener for enter key. Causes different function to run depending if game is running.
     let gameLive = document.getElementById('box');
-
     document.getElementById('answer').addEventListener('keydown', function (event) {
         if ((event.key === 'Enter') && (gameLive.style.backgroundColor === 'green')) {
             checkQuestion();
-            console.log('enter and green');
         } else if (event.key === 'Enter') {
             runGame();
             main.style.opacity = '100%';
-            console.log('enter');
         }
     })
 })
 
 /**
  * Starts game by generating first question and beginning game and round timers.
- * Called when 'Start game' button clicked. 
+ * Called when 'Start game' button clicked or enter key pressed. 
  */
 function runGame() {
-
     let main = document.getElementById('main');
     main.style.opacity = '100%';
     main.style.animation = '';
@@ -102,7 +92,6 @@ function runGame() {
     generateQuestion();
     gameTimer();
     roundTimer();
-
 }
 
 /**
@@ -161,7 +150,6 @@ function generateQuestion() {
  * Checks for what question was generated
  */
 function checkQuestion() {
-
     let condition = document.getElementById('cond1');
     if (condition.textContent === 'colour') {
         checkColour();
@@ -174,7 +162,6 @@ function checkQuestion() {
  * Takes users answer and checks if its correct.
  */
 function checkColour() {
-
     let answer = document.getElementById('answer');
     let colour = document.getElementById('cond2');
 
@@ -198,7 +185,6 @@ function checkColour() {
  * Takes users answer and checks if its correct.
  */
 function checkWord() {
-
     let colour = document.getElementById('cond2');
 
     if (answer.value.toLowerCase() === colour.textContent.toLowerCase()) {
@@ -222,7 +208,6 @@ function checkWord() {
  * Updates highscore if current score exceeded it.
  */
 function addScore() {
-
     let score = parseInt(document.getElementById('score').innerText);
 
     if (easy.checked) {
@@ -235,10 +220,12 @@ function addScore() {
 }
 
 /**
+ * Ends game.
  * Alerts user of score achieved.
+ * Updates scores.
+ * Resets timers.
  */
 function endGame() {
-
     let highScore = parseInt(document.getElementById('highscore').innerText);
     let score = parseInt(document.getElementById('score').innerText);
     let feedback = document.getElementById('feedback');
@@ -256,9 +243,9 @@ function endGame() {
         playSound('fanfare.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Why not try again to score even higher!";
         main.style.animation = 'background-color-change 500ms 4';
-        opacityTimer = setTimeout(function(){
+        opacityTimer = setTimeout(function () {
             main.style.opacity = '30%';
-        },2000);
+        }, 2000);
     } else {
         playSound('win.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Why not try again to beat your highscore of " + `${highScore}.`;
@@ -266,9 +253,6 @@ function endGame() {
     };
 
     document.getElementById('score').innerText = 0;
-
-    // let submitBtn = document.getElementById('submit-btn');
-    // submitBtn.style.visibility = 'hidden';
 
     let hideElements = document.getElementsByClassName('hide');
     for (let i = 0; i < hideElements.length; i++) {
@@ -282,9 +266,6 @@ function endGame() {
 
     let gameLive = document.getElementById('box');
     gameLive.style.backgroundColor = 'red';
-
-    // let startBtn = document.getElementById('start-btn');
-    // startBtn.focus();
 
 
     clearInterval(round);
@@ -302,6 +283,14 @@ function endGame() {
         main.style.animation = '';
         answer.focus();
     })
+
+    let feedbackArea = document.getElementById('feedback-area');
+        
+        feedbackArea.addEventListener('click', function () {
+            feedbackArea.style.visibility = 'hidden';
+            main.style.opacity = '100%';
+            main.style.animation = '';
+        })
 
 
     window.addEventListener('keydown', function (event) {
@@ -336,8 +325,3 @@ function flash() {
         answer.style.backgroundColor = '';
     }, 50);
 }
-
-// function opacity(){
-//     let main = document.getElementById('main');
-//     main.style.opacity = '30%';
-// }
