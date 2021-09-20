@@ -256,9 +256,9 @@ function endGame() {
         playSound('fanfare.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Why not try again to score even higher!";
         main.style.animation = 'background-color-change 500ms 4';
-        setTimeout(function () {
-            main.style.opacity = '30%'
-        }, 2000)
+        opacityTimer = setTimeout(function(){
+            main.style.opacity = '30%';
+        },2000);
     } else {
         playSound('win.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Why not try again to beat your highscore of " + `${highScore}.`;
@@ -309,6 +309,7 @@ function endGame() {
             endMessage.style.visibility = 'hidden';
             main.style.opacity = '100%';
             main.style.animation = '';
+            clearTimeout(opacityTimer);
             answer.focus();
         }
     })
@@ -335,3 +336,8 @@ function flash() {
         answer.style.backgroundColor = '';
     }, 50);
 }
+
+// function opacity(){
+//     let main = document.getElementById('main');
+//     main.style.opacity = '30%';
+// }
