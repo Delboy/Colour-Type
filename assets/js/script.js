@@ -253,7 +253,10 @@ function endGame() {
         document.getElementById('highscore').innerText = score;
         playSound('fanfare.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
-        main.style.animation = 'background-color-change 1s infinite';
+        main.style.animation = 'background-color-change 500ms 4';
+        setTimeout(function(){
+            main.style.opacity = '30%'
+        }, 2000)
     } else {
         playSound('win.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Hit enter to try again and beat your highscore of " + `${highScore}.`;
@@ -320,3 +323,5 @@ function flash() {
         answer.style.backgroundColor = '';
     }, 50);
 }
+
+
