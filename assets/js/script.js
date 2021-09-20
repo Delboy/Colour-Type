@@ -243,23 +243,25 @@ function endGame() {
     let score = parseInt(document.getElementById('score').innerText);
     let feedback = document.getElementById('feedback');
     let main = document.getElementById('main');
-    
+    let answer = document.getElementById('answer');
+
+    answer.blur();
 
     if (score === 0) {
         playSound('lose.wav');
-        feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Hit enter to try again."
+        feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Please try again."
         main.style.opacity = '30%';
     } else if (score > highScore) {
         document.getElementById('highscore').innerText = score;
         playSound('fanfare.wav');
-        feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Hit enter to try again!";
+        feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Try again to score even higher!";
         main.style.animation = 'background-color-change 500ms 4';
-        setTimeout(function(){
+        setTimeout(function () {
             main.style.opacity = '30%'
         }, 2000)
     } else {
         playSound('win.wav');
-        feedback.innerText = "Well Done! You scored " + `${score}` + ". Hit enter to try again and beat your highscore of " + `${highScore}.`;
+        feedback.innerText = "Well Done! You scored " + `${score}` + ". Please try again to beat your highscore of " + `${highScore}.`;
         main.style.opacity = '30%';
     };
 
@@ -281,8 +283,9 @@ function endGame() {
     let gameLive = document.getElementById('box');
     gameLive.style.backgroundColor = 'red';
 
-    let startBtn = document.getElementById('start-btn');
-    startBtn.focus();
+    // let startBtn = document.getElementById('start-btn');
+    // startBtn.focus();
+
 
     clearInterval(round);
     clearInterval(clock);
@@ -290,15 +293,24 @@ function endGame() {
     let timer = document.getElementById('game-time');
     timer.innerText = 20;
 
-    
+
 
     let endMessage = document.getElementById('feedback-area');
-    let answer = document.getElementById('answer');
-    let exit = document.getElementById('feedback-exit').addEventListener('click', function () {
+    document.getElementById('feedback-exit').addEventListener('click', function () {
         endMessage.style.visibility = 'hidden';
         main.style.opacity = '100%';
         main.style.animation = '';
         answer.focus();
+    })
+
+
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            endMessage.style.visibility = 'hidden';
+            main.style.opacity = '100%';
+            main.style.animation = '';
+            answer.focus();
+        }
     })
 }
 
@@ -323,5 +335,3 @@ function flash() {
         answer.style.backgroundColor = '';
     }, 50);
 }
-
-
