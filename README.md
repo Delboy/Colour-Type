@@ -1,5 +1,7 @@
 # Colour Type
-Colour Type is a game written in pure Javascript that plays on 'The Stroop Effect'. The Stroop effect is our tendency to experience difficulty naming a physical color when it is used to spell the name of a different color.
+Here is a link to the live project. (https://delboy.github.io/Colour-Type/)
+
+I decided to make a game that was inspired by a neuropsychological test that I discovered a few years back. The test shows you a series of words that spell one colour but are coloured in another and asks you to speak out the colour of the word and not the word itself. I thought I could make this into a game where not only the word and colour changes but the question of whether to spell out either the word or the colour also changes. 
 
 ## Design
 - __Colour Scheme__
