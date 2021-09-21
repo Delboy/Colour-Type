@@ -12,31 +12,31 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let option of options) {
         option.addEventListener('click', function () {
             answer.focus();
-        })
+        });
     }
 
     // Opens rules when cheveron clicked
     let rulesExit = document.getElementById('rules-exit');
     let rules = document.getElementById('rule-area');
-    let ruleDropBox = document.getElementsByClassName('fas fa-chevron-down')[0].addEventListener('click', function () {
+    document.getElementsByClassName('fas fa-chevron-down')[0].addEventListener('click', function () {
         if (window.innerWidth > 700) {
             rules.style.visibility = 'visible';
             rulesExit.style.visibility = 'visible';
         } else {
             rules.style.visibility = 'visible';
         }
-    })
+    });
 
     //Closes rules when 'x' clicked
     rulesExit.addEventListener('click', function () {
         rules.style.visibility = 'hidden';
         rulesExit.style.visibility = "hidden";
-    })
+    });
     // If viewed on phone touch anywhere on rules to close
     if (window.innerWidth <= 700) {
         rules.addEventListener('click', function () {
             rules.style.visibility = 'hidden';
-        })
+        });
     }
 
     // Keeps rules visible if window resized while rules showing
@@ -57,10 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
             checkQuestion();
         } else if (event.key === 'Enter') {
             runGame();
-            main.style.opacity = '100%';
         }
-    })
-})
+    });
+});
 
 /**
  * Starts game by generating first question and beginning game and round timers.
@@ -68,13 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function runGame() {
 
-    document.getElementById('answer').focus();
+    let answer = document.getElementById('answer');
+    answer.focus();
 
     // disable options
     let disable = document.getElementsByClassName('disable');
     for (let i = 0; i < disable.length; i++) {
         disable[i].disabled = true;
-    };
+    }
 
     // Change box to green indicating game is live
     let gameLive = document.getElementById('box');
@@ -209,7 +209,7 @@ function addScore() {
         document.getElementById('score').innerText = score + 2;
     } else {
         document.getElementById('score').innerText = score + 3;
-    };
+    }
 }
 
 /**
@@ -232,7 +232,7 @@ function endGame() {
 
     if (score === 0) {
         playSound('lose.wav');
-        feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Why not try again?"
+        feedback.innerText = "Oh no! You scored ZERO! Did you read the rules correctly?. Why not try again?";
         main.style.opacity = '30%';
     } else if (score > highScore) {
         document.getElementById('highscore').innerText = score;
@@ -246,7 +246,7 @@ function endGame() {
         playSound('win.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + ". Why not try again to beat your highscore of " + `${highScore}.`;
         main.style.opacity = '30%';
-    };
+    }
 
     // Closes feedback box when clicked or enter pressed
     document.getElementById('feedback-exit').addEventListener('click', function () {
@@ -254,14 +254,14 @@ function endGame() {
         main.style.opacity = '100%';
         main.style.animation = '';
         answer.focus();
-    })
+    });
 
     if (window.innerWidth < 700) {
         feedbackArea.addEventListener('click', function () {
             feedbackArea.style.visibility = 'hidden';
             main.style.opacity = '100%';
             main.style.animation = '';
-        })
+        });
     }
 
     window.addEventListener('keydown', function (event) {
@@ -272,7 +272,7 @@ function endGame() {
             answer.focus();
             clearTimeout(opacityTimer);
         }
-    })
+    });
 
     // Resets score
     document.getElementById('score').innerText = 0;
@@ -281,7 +281,7 @@ function endGame() {
     let disable = document.getElementsByClassName('disable');
     for (let i = 0; i < disable.length; i++) {
         disable[i].disabled = false;
-    };
+    }
 
     // Changes box to red to indicate game not running
     let gameLive = document.getElementById('box');
