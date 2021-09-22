@@ -182,7 +182,7 @@ function checkColour() {
 function checkWord() {
     let colour = document.getElementById('cond2');
     let answer = document.getElementById('answer');
-    
+
     if (answer.value.toLowerCase() === colour.textContent.toLowerCase()) {
         addScore();
         generateQuestion();
@@ -303,6 +303,8 @@ function endGame() {
  * Plays sound effect
  */
 function playSound(x) {
+    let mute = document.getElementById('mute');
+
     if (mute.checked) {
         '';
     } else {
