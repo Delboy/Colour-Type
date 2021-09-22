@@ -8,14 +8,14 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 ### Colour Scheme
 - I wanted to keep the colour scheme plain and simple as to not distract the user from the colouring of the question word. I liked the idea of the game looking like it was scribbled on a white board so I kept the main colours of the site black and white. 
 ### Typography
-- The game uses 'indie flower' as its main font as it has a whiteboard pen-like handwritting quality which gives the page a school game feel. With the title I used 'Special Elite' for its typewritter look. I thought it suited the name of the game pretty well as your 'typing' out words. Sans sarif was used as a fall back font incase of any problems loading the page.
+- The game uses 'indie flower' as its main font as it has a whiteboard pen-like handwriting quality which gives the page a school game feel. With the title I used 'Special Elite' for its typewriter look. I thought it suited the name of the game pretty well as your 'typing' out words. Sans sarif was used as a fallback font incase of any problems loading the page.
 ### Wireframes
 * [Desktop](assets/readme-assets/wireframes/desktop.pdf)
 * [Tablet](assets/readme-assets/wireframes/tablet.pdf)
 * [Mobile](assets/readme-assets/wireframes/mobile.pdf)
 
-Colour-Type/assets/readme-assets/wireframes/Desktop.pdf
-
+- For the desktop version I wanted two columns. The left column being the options and game area with the rules being on the right.
+- For tablets and phones I wanted only the left column to remain but sit in the center of the page. The rules column is initially hidden and displays in the center of the screen when the downward chevron is clicked.
 
 ## Features
 
@@ -26,28 +26,28 @@ Colour-Type/assets/readme-assets/wireframes/Desktop.pdf
 - On desktop the rules are easily visible to the right of the game area. 
 - If using a smaller screen, to save space, the rule area is initially hidden. Clicking the downward chevron next to the 'how to play' link displays the rules in the center of the screen.
 - On tablet size screens touching the 'x' in the top right corner will close the rules.
-- On mobile size screens touching touching the rules anywhere will close it.
+- On mobile size screens touching the rules anywhere will close it.
 ### Options Area
-- Here the user can change the difficulty of the game and also choose wether to mute the sound or not. 
+- Here the user can change the difficulty of the game and also choose whether to mute the sound or not. 
 - Changing the difficulty does two things. It affects both the amount of time to answer each question and how many points are awarded for each question answered correctly. 
 - The difficulty settings disables when the game starts and re-enables when the game ends. This is to stop the user from changing difficulty halfway through a round. 
-- The mute checkbox can be checked and unchecked at anytime during play.
+- The mute checkbox can be checked and unchecked at any time during play.
 ### Game Area
 - The game area consists of: 
      - A 'start game btn' which runs the game. This button disables once the game is running and re-enables when the game ends.
-     - A question area where the current question will be displayed and a text box for the user to enter thier answer.
+     - A question area where the current question will be displayed and a text box for the user to enter their answer.
      - A Timer showing how many seconds left till the game ends. 
-     - A score area which displays the users current score and thier high score.
+     - A score area which displays the users current score and their high score.
 - The enter/return key can also be used to start the game.
-- The answer box will flash red for a split second if an incorrect answer is entered. It will aslo play an incorrect sound effect.
+- The answer box will flash red for a split second if an incorrect answer is entered. It will also play an incorrect sound effect.
 - If the user enters a correct answer it will play a correct sound effect.
 - The timer also plays a 'ticking' sound effect every second that passes by.
 ### Feedback Area
-- This section is hidden until the round finishes on which it will display a message to the user noting them of thier score and possible new high score. It will also encourage them to play again. 
+- This section is hidden until the round finishes on which it will display a message to the user noting them of their score and possible new high score. It will also encourage them to play again. 
 - If the user scores a new highscore a fanfare sound effect will play and the page will briefly flash through a range of colours.
-- If the user dosnt beat thier highscore a win sound effect will play.
+- If the user doesn't beat their highscore a win sound effect will play.
 - If the user scores 0 a lose sound effect will play and the message will ask the user if they read the rules.
-- Hitting the enter/return key or clicking the feeback box will close it.
+- Hitting the enter/return key or clicking the feedback box will close it.
 
 ## Testing
 ### Validators
