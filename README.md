@@ -44,7 +44,7 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 - The difficulty settings disables when the game starts and re-enables when the game ends. This is to stop the user from changing difficulty halfway through a round. 
 - The mute checkbox can be checked and unchecked at any time during play.
 
-<img src="assets/readme-assets/images/options.png" width="550" height="250">
+<img src="assets/readme-assets/images/options.png" width="300" height="150">
 
 
 ### Game Area
@@ -58,7 +58,7 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 - If the user enters a correct answer it will play a correct sound effect.
 - The timer also plays a 'ticking' sound effect every second that passes by.
 
-<img src="assets/readme-assets/images/game.png" width="550" height="500">
+<img src="assets/readme-assets/images/game.png" width="300" height="300">
 
 ### Feedback Area
 - This section is hidden until the round finishes on which it will display a message to the user noting them of their score and possible new high score. It will also encourage them to play again. 
@@ -67,7 +67,7 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 - If the user scores 0 a lose sound effect will play and the message will ask the user if they read the rules.
 - Hitting the enter/return key or clicking the feedback box will close it.
 
-<img src="assets/readme-assets/images/feedback.png" width="550" height="500"><
+<img src="assets/readme-assets/images/feedback.png" width="250" height="200"><
 
 ### Footer
 - The footer displays my name and has social links to my linkedin and github pages. This will encourage users to check out my other work or potential employers to contact me.
