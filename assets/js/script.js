@@ -305,9 +305,7 @@ function endGame() {
 function playSound(x) {
     let mute = document.getElementById('mute');
 
-    if (mute.checked) {
-        '';
-    } else {
+    if (mute.checked === false) {
         new Audio("assets/sounds/" + x).play();
     }
 }
