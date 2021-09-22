@@ -2,6 +2,7 @@
 Here is a link to the live project. (https://delboy.github.io/Colour-Type/)
 
 I decided to make a game that was inspired by a neuropsychological test that I discovered a few years back. The test shows you a series of words that spell one colour but are coloured in another and asks you to speak out the colour of the word and not the word itself. I thought I could make this into a game where not only the word and colour changes but the question of whether to spell out either the word or the colour also changes. 
+![image](assets/readme-assets/images/responsive.png)
 
 ## Design
 
@@ -13,6 +14,7 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 - To keep in line with the whiteboard, school like game, I used a black box border which resembles a black marker scribbling on the board, and a clipboard with some lined paper and some rough notes jotted down to make the rules.
 - A spiral of colours was used as the favicon to reflect the nature of the game.
 ### Wireframes
+
 * [Desktop](assets/readme-assets/wireframes/desktop.pdf)
 * [Tablet](assets/readme-assets/wireframes/tablet.pdf)
 * [Mobile](assets/readme-assets/wireframes/mobile.pdf)
@@ -23,18 +25,28 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 ## Features
 
 ### Title
-- This title sits at the top of the page showing the user the name of the game as soon as they land on the site. Being that the game is all about colour I decided to animate the title to cycle through a bunch of different colours. 
+- This title sits at the top of the page showing the user the name of the game as soon as they land on the site. Being that the game is all about colour I decided to animate the title to cycle through a bunch of different colours.
+
+<img src="assets/readme-assets/images/header.png" width="450" height="100">
+
 ### Rule Area
 - The rule area explains the rules of the game, giving two examples to aid the user. 
 - On desktop the rules are easily visible to the right of the game area. 
 - If using a smaller screen, to save space, the rule area is initially hidden. Clicking the downward chevron next to the 'how to play' link displays the rules in the center of the screen.
 - On tablet size screens touching the 'x' in the top right corner will close the rules.
 - On mobile size screens touching the rules anywhere will close it.
+
+<img src="assets/readme-assets/images/rules.png" width="350" height="450">
+
 ### Options Area
 - Here the user can change the difficulty of the game and also choose whether to mute the sound or not. 
 - Changing the difficulty does two things. It affects both the amount of time to answer each question and how many points are awarded for each question answered correctly. 
 - The difficulty settings disables when the game starts and re-enables when the game ends. This is to stop the user from changing difficulty halfway through a round. 
 - The mute checkbox can be checked and unchecked at any time during play.
+
+<img src="assets/readme-assets/images/options.png" width="550" height="250">
+
+
 ### Game Area
 - The game area consists of: 
      - A 'start game btn' which runs the game. This button disables once the game is running and re-enables when the game ends.
@@ -45,12 +57,22 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 - The answer box will flash red for a split second if an incorrect answer is entered. It will also play an incorrect sound effect.
 - If the user enters a correct answer it will play a correct sound effect.
 - The timer also plays a 'ticking' sound effect every second that passes by.
+
+<img src="assets/readme-assets/images/game.png" width="550" height="500">
+
 ### Feedback Area
 - This section is hidden until the round finishes on which it will display a message to the user noting them of their score and possible new high score. It will also encourage them to play again. 
 - If the user scores a new highscore a fanfare sound effect will play and the page will briefly flash through a range of colours.
 - If the user doesn't beat their highscore a win sound effect will play.
 - If the user scores 0 a lose sound effect will play and the message will ask the user if they read the rules.
 - Hitting the enter/return key or clicking the feedback box will close it.
+
+<img src="assets/readme-assets/images/feedback.png" width="550" height="500"><
+
+### Footer
+- The footer displays my name and has social links to my linkedin and github pages. This will encourage users to check out my other work or potential employers to contact me.
+
+<img src="assets/readme-assets/images/footer.png" width="300" height="50">
 
 ## Testing
 ### Validators
