@@ -10,7 +10,9 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 ### Typography
 - The game uses 'indie flower' as its main font as it has a whiteboard pen-like handwritting quality which gives the page a school game feel. With the title I used 'Special Elite' for its typewritter look. I thought it suited the name of the game pretty well as your 'typing' out words. Sans sarif was used as a fall back font incase of any problems loading the page.
 ### Wireframes
-![image](wireframes/colour-type.png)
+* [Desktop](assets/readme-assets/wireframes/desktop.pdf)
+* [Tablet](assets/readme-assets/wireframes/tablet.pdf)
+* [Mobile](assets/readme-assets/wireframes/mobile.pdf)
 
 ## Features
 
