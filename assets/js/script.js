@@ -6,7 +6,7 @@ let timers = {
 };
 
 // Wait for DOM to finish loading before enabling start game button
-// Get elements for answer field and submit button and add event listeners to them
+// Adds event listeners for all clickable elements
 document.addEventListener("DOMContentLoaded", function () {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         rules.style.visibility = 'hidden';
         rulesExit.style.visibility = "hidden";
     });
-    // If viewed on phone touch anywhere on rules to close
+    // Closes 'rules' if touched anywhere on phone size screens
     if (window.innerWidth <= 700) {
         rules.addEventListener('click', function () {
             rules.style.visibility = 'hidden';
