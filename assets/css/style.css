@@ -162,6 +162,7 @@ ul li {
 
 #question {
     margin-top: .5em;
+    margin-bottom: .5em;
     font-size: 1.5em;
 }
 
@@ -393,6 +394,7 @@ footer {
     #question,
     #answer {
         margin-right: 10px;
+        margin-bottom: 0;
         ;
     }
 
