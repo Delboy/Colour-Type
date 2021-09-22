@@ -1,5 +1,7 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 
 /* defualts */
 * {
@@ -31,9 +33,10 @@ body {
 
 /* Header */
 h1 {
+    font-family: 'special elite', sans-serif;
     font-size: 5em;
     text-align: center;
-    margin: 10px 0 0;
+    margin: 25px 0 0;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     animation: color-change 10s infinite;
 }

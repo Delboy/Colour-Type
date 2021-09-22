@@ -8,7 +8,7 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 ### Colour Scheme
 - I wanted to keep the colour scheme plain and simple as to not distract the user from the colouring of the question word. I liked the idea of the game looking like it was scribbled on a white board so I kept the main colours of the site black and white. 
 ### Typography
-- The game only uses the font 'indie flower' as it has a whiteboard pen-like handwritting quality which gives the page a game school game feel. Sans sarif was used as a fall back font incase of any problems loading the page.
+- The game uses 'indie flower' as its main font as it has a whiteboard pen-like handwritting quality which gives the page a school game feel. With the title I used 'Special Elite' for its typewritter look. I thought it suited the name of the game pretty well as your 'typing' out words. Sans sarif was used as a fall back font incase of any problems loading the page.
 ### Wireframes
 ![image](wireframes/colour-type.png)
 
