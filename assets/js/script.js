@@ -28,8 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth > 700) {
             rules.style.visibility = 'visible';
             rulesExit.style.visibility = 'visible';
+            playSound('click.wav');
         } else {
             rules.style.visibility = 'visible';
+            playSound('click.wav');
         }
     });
 
@@ -37,11 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
     rulesExit.addEventListener('click', function () {
         rules.style.visibility = 'hidden';
         rulesExit.style.visibility = "hidden";
+        playSound('click.wav');
     });
     // Closes 'rules' if touched anywhere on phone size screens
     if (window.innerWidth <= 700) {
         rules.addEventListener('click', function () {
             rules.style.visibility = 'hidden';
+            playSound('click.wav');
         });
     }
 
