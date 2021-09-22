@@ -1,6 +1,12 @@
+// Declare global variables
+let timers = {
+    clock: 0,
+    round: 0,
+    opacity: 0,
+};
+
 // Wait for DOM to finish loading before enabling start game button
 // Get elements for answer field and submit button and add event listeners to them
-
 document.addEventListener("DOMContentLoaded", function () {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
@@ -8,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Refocuses Answer field after options changed
     let options = document.getElementsByClassName('option');
-    let answer = document.getElementById('answer');
+    const answer = document.getElementById('answer');
     for (let option of options) {
         option.addEventListener('click', function () {
             answer.focus();
@@ -94,7 +100,7 @@ function runGame() {
  */
 function gameTimer() {
     setTimeout(endGame, 20000);
-    clock = setInterval(countDown, 1000);
+    timers.clock = setInterval(countDown, 1000);
 }
 
 /**
@@ -114,11 +120,11 @@ function roundTimer() {
     let normal = document.getElementById('normal');
     let hard = document.getElementById('hard');
     if (normal.checked) {
-        round = setInterval(generateQuestion, 4000);
+        timers.round = setInterval(generateQuestion, 4000);
     } else if (hard.checked) {
-        round = setInterval(generateQuestion, 2000);
+        timers.round = setInterval(generateQuestion, 2000);
     } else {
-        round = setInterval(generateQuestion, 20000);
+        timers.round = setInterval(generateQuestion, 20000);
     }
 }
 
@@ -163,7 +169,7 @@ function checkColour() {
     if (answer.value.toLowerCase() === colour.style.color) {
         addScore();
         generateQuestion();
-        clearInterval(round);
+        clearInterval(timers.round);
         roundTimer();
         document.getElementById('answer').value = '';
         console.log('check colour working if correct');
@@ -186,7 +192,7 @@ function checkWord() {
     if (answer.value.toLowerCase() === colour.textContent.toLowerCase()) {
         addScore();
         generateQuestion();
-        clearInterval(round);
+        clearInterval(timers.round);
         roundTimer();
         document.getElementById('answer').value = '';
         console.log('check word working if correct');
@@ -244,7 +250,7 @@ function endGame() {
         playSound('fanfare.wav');
         feedback.innerText = "Well Done! You scored " + `${score}` + " and beat your highscore of " + `${highScore}.` + " Why not try again to score even higher!";
         main.style.animation = 'background-color-change 500ms 4';
-        opacityTimer = setTimeout(function () {
+        timers.opacity = setTimeout(function () {
             main.style.opacity = '30%';
         }, 2000);
     } else {
@@ -275,7 +281,7 @@ function endGame() {
             main.style.opacity = '100%';
             main.style.animation = '';
             answer.focus();
-            clearTimeout(opacityTimer);
+            clearTimeout(timers.opacity);
         }
     });
 
@@ -293,8 +299,8 @@ function endGame() {
     gameLive.style.backgroundColor = 'red';
 
     // Clears timers
-    clearInterval(round);
-    clearInterval(clock);
+    clearInterval(timers.round);
+    clearInterval(timers.clock);
     let timer = document.getElementById('game-time');
     timer.innerText = 20;
 }
