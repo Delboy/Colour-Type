@@ -111,6 +111,8 @@ function countDown() {
  * Length of timer is set from 'options' section.
  */
 function roundTimer() {
+    let normal = document.getElementById('normal');
+    let hard = document.getElementById('hard');
     if (normal.checked) {
         round = setInterval(generateQuestion, 4000);
     } else if (hard.checked) {
@@ -179,7 +181,8 @@ function checkColour() {
  */
 function checkWord() {
     let colour = document.getElementById('cond2');
-
+    let answer = document.getElementById('answer');
+    
     if (answer.value.toLowerCase() === colour.textContent.toLowerCase()) {
         addScore();
         generateQuestion();
@@ -202,6 +205,8 @@ function checkWord() {
  */
 function addScore() {
     let score = parseInt(document.getElementById('score').innerText);
+    let easy = document.getElementById('easy');
+    let normal = document.getElementById('normal');
 
     if (easy.checked) {
         document.getElementById('score').innerText = ++score;
