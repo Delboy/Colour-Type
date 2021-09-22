@@ -14,6 +14,9 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 * [Tablet](assets/readme-assets/wireframes/tablet.pdf)
 * [Mobile](assets/readme-assets/wireframes/mobile.pdf)
 
+Colour-Type/assets/readme-assets/wireframes/Desktop.pdf
+
+
 ## Features
 
 ### Title
