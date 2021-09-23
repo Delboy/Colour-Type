@@ -176,11 +176,9 @@ function checkColour() {
         clearInterval(timers.round);
         roundTimer();
         document.getElementById('answer').value = '';
-        console.log('check colour working if correct');
         playSound('correct.wav');
     } else {
         document.getElementById('answer').value = '';
-        console.log('check colour working if incorrect');
         playSound('incorrect.mp3');
         flash();
     }
@@ -199,11 +197,9 @@ function checkWord() {
         clearInterval(timers.round);
         roundTimer();
         document.getElementById('answer').value = '';
-        console.log('check word working if correct');
         playSound('correct.wav');
     } else {
         document.getElementById('answer').value = '';
-        console.log('check word working if incorrect');
         playSound('incorrect.mp3');
         flash();
     }

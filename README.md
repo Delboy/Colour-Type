@@ -1,9 +1,27 @@
 # Colour Type
 Here is a link to the live project. (https://delboy.github.io/Colour-Type/)
 
-I decided to make a game that was inspired by a neuropsychological test that I discovered a few years back. The test shows you a series of words that spell one colour but are coloured in another and asks you to speak out the colour of the word and not the word itself. I thought I could make this into a game where not only the word and colour changes but the question of whether to spell out either the word or the colour also changes. 
+Colour Type is a game that is inspired by a neuropsychological test called the stroop test. The test shows you a series of words that spell one colour but are coloured in another and asks you to speak out the colour of the word and not the word itself. I thought I could make this into a game where not only the word and colour changes but the question of whether to spell out either the word or the colour also changes. 
 
 ![image](assets/readme-assets/images/responsive.png)
+
+## User Experience (UX)
+
+### User Goals
+- As a user I want to have some fun for a few minutes.
+- As a user I want to develop my cognitive and typing skills.
+
+### Project Goals
+- As the site owner I want the user to have a fun experience.
+- As the site owner I want the site to be responsive to all screen sizes.
+- As the site owner I want the site to direct traffic to my other projects.
+
+### User Stories
+- As a user I want to instantly understand the main purpose of the site.
+- As a user I want to be able to understand the rules of the game.
+- As a user I want to understand how to play the game.
+- As a user I want feedback on how I'm scoring.
+- As a user I want the options to change the difficulty of the game.
 
 ## Design
 
@@ -76,6 +94,9 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 <img src="assets/readme-assets/images/footer.png" width="300" height="50">
 
 ## Testing
+
+
+
 ### Validators
 - HTML
     - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdelboy.github.io%2FColour-Type%2F)
