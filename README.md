@@ -2,6 +2,7 @@
 Here is a link to the live project. (https://delboy.github.io/Colour-Type/)
 
 I decided to make a game that was inspired by a neuropsychological test that I discovered a few years back. The test shows you a series of words that spell one colour but are coloured in another and asks you to speak out the colour of the word and not the word itself. I thought I could make this into a game where not only the word and colour changes but the question of whether to spell out either the word or the colour also changes. 
+
 ![image](assets/readme-assets/images/responsive.png)
 
 ## Design
@@ -76,6 +77,17 @@ I decided to make a game that was inspired by a neuropsychological test that I d
 
 ## Testing
 ### Validators
+- HTML
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdelboy.github.io%2FColour-Type%2F)
+- CSS
+    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdelboy.github.io%2FColour-Type%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- JavaScript
+    - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+    - The following metrics were returned
+    - There are 24 functions in this file.
+    - Function with the largest signature take 1 arguments, while the median is 0.
+    - Largest function has 34 statements in it, while the median is 4.
+    - The most complex function has a cyclomatic complexity value of 5 while the median is 2.
 ### Further Testing
 ### Bugs
 
