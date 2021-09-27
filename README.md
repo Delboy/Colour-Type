@@ -93,6 +93,33 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 <img src="assets/readme-assets/images/footer.png" width="300" height="50">
 
+## Technologies 
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+
+- [Google Fonts](https://fonts.google.com/)
+    - Google fonts were used to import both fonts used. 
+- [Font Awesome](https://fontawesome.com/)
+    - Font awesome was used for the two social media icons, and the downward cheveron in the rules dropdown.
+- [GitHub](https://github.com/)
+    - For storing code and deploying the site.
+- [Gitpod](https://www.gitpod.io/)
+    - Used for editing my code.
+- [Balsamiq](https://balsamiq.com/)
+    - To create my wireframes.
+- [Am I responsive](http://ami.responsivedesign.is/)
+    - To generate image at the beginning of the README.
+- [Chrome devtools](https://developer.chrome.com/docs/devtools/)
+    - To troubleshoot with console, change code before implementing, and to test responsiveness. 
+- [TinyJPG](https://tinyjpg.com/)
+    - I used TinyJPG to reduce the size of my images reducing load times.
+
 ## Testing
 
 ### User stories Testing
@@ -205,4 +232,4 @@ For more information on cloning check out the github documentation [here](https:
 - I learned how to add audio from [this] thread (https://stackoverflow.com/questions/9419263/how-to-play-audio) on stackoverflow.com.
 - All sounds were sourced from [Freesounds.org](https://freesound.org/).
 - Clipboard pic was sourced from https://www.subpng.com/png-co8iji/download.html.
-- Box https://www.pngwing.com/en/free-png-bbrpb
+- The border drawing was sourced from [here](https://www.pngwing.com/en/free-png-bbrpb).
