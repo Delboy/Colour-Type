@@ -229,7 +229,14 @@ To clone my project you must;
 For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ## Credits
-- I learned how to add audio from [this] thread (https://stackoverflow.com/questions/9419263/how-to-play-audio) on stackoverflow.com.
+
+### Code
+- I learnt how to add audio from this thread on [stackoverflow.com](https://stackoverflow.com/questions/9419263/how-to-play-audio).
+- I learnt how to give font an outline on this thread on [stackoverflow.com](https://stackoverflow.com/questions/4919076/outline-effect-to-text).
+- I used [W3schools.com](https://www.w3schools.com/css/css3_animations.asp) to learn about animations which I used for the title, and for the colour changing backgrounds.
+- I used [Flexboxfroggy.com](https://flexboxfroggy.com/) to learn how to use flexbox.
+
+### Media
 - All sounds were sourced from [Freesounds.org](https://freesound.org/).
-- Clipboard pic was sourced from https://www.subpng.com/png-co8iji/download.html.
-- The border drawing was sourced from [here](https://www.pngwing.com/en/free-png-bbrpb).
+- Clipboard pic was sourced from [subpng](https://www.subpng.com/png-co8iji/download.html).
+- The border drawing was sourced from [PNGwing](https://www.pngwing.com/en/free-png-bbrpb).
