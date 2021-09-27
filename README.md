@@ -95,8 +95,6 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 ## Testing
 
-
-
 ### User stories Testing
 
 *As a user I want to be able to understand the rules of the game.*
@@ -146,6 +144,17 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
     - Largest function has 34 statements in it, while the median is 4.
     - The most complex function has a cyclomatic complexity value of 5 while the median is 2.
 ### Further Testing
+
+- Testing was done throughout development using a combination of Chrome Developer tools and console logs. Each Time a new function was created a console log was used before the relevant code was implemented to ensure that the function was wired up correctly.
+- The site was tested on google chrome, edge, firefox and safari browsers.
+- The site was viewed on multiple devices such as desktop (including an ultra wide monitor), iphone, ipad, ipad mini, and laptop.
+- Responsiveness was tested using google chrome dev tools to check multiple device sizes.
+- All links were checked extensively to make sure they direct the user to the correct location.
+- The game was played extensively using variations of all possible options.
+- Score and highscores were checked to make sure they update correctly across all game difficulties.
+- Sound was tested to make sure nothing is played when the game is muted. 
+
+
 ### Bugs
 
  - The sound effects on do not sync up with the game correctly when played on a phone or tablet.
