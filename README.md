@@ -5,6 +5,46 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 ![image](assets/readme-assets/images/responsive.png)
 
+## Contents 
+
+- [User Experience (UX)](#user-experience-(ux))
+   * [User Goals](#user-goals)
+   * [Project Goals](#project-goals) 
+   * [User Stories](#user-stories)
+   
+- [Design](#design)
+   * [Colour Scheme](#colour-scheme)
+   * [Typography](#typography)
+   * [Imagery](#imagery)
+
+- [Features](#features)
+   * [Title](#title)
+   * [Rule Area](#rule-area)
+   * [Options Area](#options-area)
+   * [Game Area](#game-area)
+   * [Feedback Area](#feedback-area)
+   * [Footer](#footer)
+
+- [Technologies](#technologies)
+   * [Languages used](#languages-used)
+   * [Libraries & Programs Used](#libraries-&-programs-used)
+
+- [Testing](#testing)
+   * [User stories testing](#user-stories-testing)
+   * [Validators](#validators)
+   * [Further Testing](#further-testing)
+   * [Bugs](#bugs)
+
+- [Deployment](#deployment)
+   * [Creation](#creation)
+   * [Github pages](#github-pages)
+   * [Forking](#forking)
+   * [Clone](#clone)
+
+- [Credits](#credits)
+   * [Code](#code)
+   * [Media](#media)
+
 ## User Experience (UX)
 
 ### User Goals
@@ -101,7 +141,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks, Libraries & Programs Used
+### Libraries & Programs Used
 
 - [Google Fonts](https://fonts.google.com/)
     - Google fonts were used to import both fonts used. 
