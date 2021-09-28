@@ -7,7 +7,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 ## Contents 
 
-- [User Experience (UX)](#user-experience-(ux))
+- [User Experience (UX)](#user-experience-ux)
    * [User Goals](#user-goals)
    * [Project Goals](#project-goals) 
    * [User Stories](#user-stories)
@@ -27,7 +27,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 - [Technologies](#technologies)
    * [Languages used](#languages-used)
-   * [Libraries & Programs Used](#libraries-&-programs-used)
+   * [Libraries & Programs Used](#libraries-and-programs-used)
 
 - [Testing](#testing)
    * [User stories testing](#user-stories-testing)
@@ -141,7 +141,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
-### Libraries & Programs Used
+### Libraries and Programs Used
 
 - [Google Fonts](https://fonts.google.com/)
     - Google fonts were used to import both fonts used. 
