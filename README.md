@@ -230,42 +230,42 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 - ### Creation 
 
-To create a new repository I took the following steps:
-1. Logged into Github.
-2. Clicked over to the ‘repositories’ section.
-3. Clicked the green ‘new’ button. This takes you to the create new repository page.
-4. Once there under ‘repository template’ I chose the code institute template from the dropdown menu.
-5. I input a repository name then clicked the green ‘create repository button’ at the bottom of the page.
-6. Once created I opened the new repository and clicked the green ‘Gitpod’ button to create a workspace in Gitpod for editing.
+    To create a new repository I took the following steps:
+    1. Logged into Github.
+    2. Clicked over to the ‘repositories’ section.
+    3. Clicked the green ‘new’ button. This takes you to the create new repository page.
+    4. Once there under ‘repository template’ I chose the code institute template from the dropdown menu.
+    5. I input a repository name then clicked the green ‘create repository button’ at the bottom of the page.
+    6. Once created I opened the new repository and clicked the green ‘Gitpod’ button to create a workspace in Gitpod for editing.
 
 - ### Github pages
-I deployed my project to Gihub pages by taking the following steps:
+    I deployed my project to Gihub pages by taking the following steps:
 
-1. Logged in to Github and opened my repository.
-2. Clicked settings.
-3. Selected the ‘pages’ section from the options on the left.
-4. From here I clicked the drop down menu under 'sources' and selected 'main'.
-5. After a couple minutes the page will be published and the site address will be available in the github page section.
+    1. Logged in to Github and opened my repository.
+    2. Clicked settings.
+    3. Selected the ‘pages’ section from the options on the left.
+    4. From here I clicked the drop down menu under 'sources' and selected 'main'.
+    5. After a couple minutes the page will be published and the site address will be available in the github page section.
 
     
 - ### Forking
 
-To fork my project you must;
-1. Sign in to Github and go to my [repository](https://github.com/Delboy/Colour-Type)
-2. Locate the Fork button at the top right of the page.
-3. Select this. 
-4. The fork is now in your repositories.
+    To fork my project you must;
+    1. Sign in to Github and go to my [repository](https://github.com/Delboy/Colour-Type)
+    2. Locate the Fork button at the top right of the page.
+    3. Select this. 
+    4. The fork is now in your repositories.
 
 - ### Clone
-To clone my project you must;
+    To clone my project you must;
 
-1. Sign in to Github and go to my [repository](https://github.com/Delboy/Colour-Type)
-2. Above the list of files click the green ‘code’ button.
-3. This will bring up a few options as to how you would like to clone. You can select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
-4. Open git bash
-5. Type ‘git clone’ and then paste the URL you copied. Press Enter.
+    1. Sign in to Github and go to my [repository](https://github.com/Delboy/Colour-Type)
+    2. Above the list of files click the green ‘code’ button.
+    3. This will bring up a few options as to how you would like to clone. You can select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
+    4. Open git bash
+    5. Type ‘git clone’ and then paste the URL you copied. Press Enter.
 
-For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ## Credits
 
