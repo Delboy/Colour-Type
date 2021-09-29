@@ -66,7 +66,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 ## Design
 
 ### Colour Scheme
-- I wanted to keep the colour scheme plain and simple as to not distract the user from the colouring of the question word. I liked the idea of the game looking like it was scribbled on a white board so I kept the main colours of the site black and white. 
+- I wanted to keep the colour scheme plain and simple so as to not distract the user from the colouring of the question word. I liked the idea of the game looking like it was scribbled on a white board so I kept the main colours of the site black and white. 
 ### Typography
 - The game uses 'indie flower' as its main font as it has a whiteboard pen-like handwriting quality which gives the page a school game feel. With the title I used 'Special Elite' for its typewriter look. I thought it suited the name of the game pretty well as your 'typing' out words. Sans sarif was used as a fallback font incase of any problems loading the page.
 ### Imagery
@@ -90,10 +90,9 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 ### Rule Area
 - The rule area explains the rules of the game, giving two examples to aid the user. 
-- On desktop the rules are easily visible to the right of the game area. 
-- If using a smaller screen, to save space, the rule area is initially hidden. Clicking the downward chevron next to the 'how to play' link displays the rules in the center of the screen.
-- On tablet size screens touching the 'x' in the top right corner will close the rules.
-- On mobile size screens touching the rules anywhere will close it.
+- If the user is on desktop then the rules are easily visible to the right of the game area. 
+- If the user is on a smaller device, to save space, the rule area is initially hidden. Clicking the downward chevron next to the 'how to play' link displays the rules in the center of the screen.
+- On tablet size screens touching the 'x' in the top right corner will close the rules, whereas touching the rules anywhere on mobile size screens will close it.
 
 <img src="assets/readme-assets/images/rules.png" width="350" height="450">
 
@@ -120,7 +119,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 <img src="assets/readme-assets/images/game.png" width="300" height="300">
 
 ### Feedback Area
-- This section is hidden until the round finishes on which it will display a message to the user noting them of their score and possible new high score. It will also encourage them to play again. 
+- This section is hidden until the round finishes on which it will display a message to the user noting their score and possible new high score. It will also encourage them to play again. 
 - If the user scores a new highscore a fanfare sound effect will play and the page will briefly flash through a range of colours.
 - If the user doesn't beat their highscore a win sound effect will play.
 - If the user scores 0 a lose sound effect will play and the message will ask the user if they read the rules.
@@ -146,7 +145,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - [Google Fonts](https://fonts.google.com/)
     - Google fonts were used to import both fonts used. 
 - [Font Awesome](https://fontawesome.com/)
-    - Font awesome was used for the two social media icons, and the downward cheveron in the rules dropdown.
+    - Font awesome was used for the two social media icons, and the downward chevron in the rules dropdown.
 - [GitHub](https://github.com/)
     - For storing code and deploying the site.
 - [Gitpod](https://www.gitpod.io/)
@@ -154,11 +153,11 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - [Balsamiq](https://balsamiq.com/)
     - To create my wireframes.
 - [Am I responsive](http://ami.responsivedesign.is/)
-    - To generate image at the beginning of the README.
+    - To generate the image at the beginning of the README.
 - [Chrome devtools](https://developer.chrome.com/docs/devtools/)
-    - To troubleshoot with console, change code before implementing, and to test responsiveness. 
+    - To troubleshoot with the console, change code before implementing, and to test responsiveness. 
 - [TinyJPG](https://tinyjpg.com/)
-    - I used TinyJPG to reduce the size of my images reducing load times.
+    - I used TinyJPG to reduce the size of my images to reduce load times.
 
 ## Testing
 
@@ -182,7 +181,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - Audio cues let the user know if they are answering correctly or not.
 - Visual cues such as the answer box flashing red for incorrect answers also help aid the user to how well they’re doing.
 - The feedback box at the end of the round will display your score and your highscore.
-- If the user beats their highscore then the page will play a fanfare sound effect and flash the screen through multiple colours for a few seconds.
+- If the user beats their high score then the page will play a fanfare sound effect and flash the screen through multiple colours for a few seconds.
 
 *As a user I want the game to be enjoyable regardless of my skill.*
 - The user can change the difficulty in the game by reducing the amount of time they have to answer each question correctly.
@@ -224,8 +223,8 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 ### Bugs
 
- - The sound effects on do not sync up with the game correctly when played on a phone or tablet.
- - The background animation that triggers when you beat yourscore causes distortion on some elements when viewed on a phone or tablet.
+ - The sound effects do not sync up with the game correctly when played on a phone or tablet.
+ - The background animation that triggers when you beat your high score causes distortion on some elements when viewed on a phone or tablet.
 
 ## Deployment
 
