@@ -6,7 +6,7 @@ let timers = {
 };
 
 // Wait for DOM to finish loading before enabling start game button
-// Adds event listeners for all clickable elements
+// Adds event listeners
 document.addEventListener("DOMContentLoaded", function () {
     let startBtn = document.getElementById('start-btn');
     startBtn.focus();
