@@ -117,6 +117,10 @@ h1 {
     background-size: 700px 250px;
 }
 
+input {
+    cursor: pointer;
+}
+
 #mute-area {
     float: right;
     padding-right: 4em;
@@ -153,6 +157,7 @@ ul li {
     padding: .2em;
     border: 2px solid black;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #start-btn:hover {
