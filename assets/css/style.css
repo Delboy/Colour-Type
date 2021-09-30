@@ -432,6 +432,7 @@ footer p {
         height: 210px;
         width: 100%;
         background-size: 100% 210px;
+        cursor: pointer;
     }
 
     #feedback-exit {

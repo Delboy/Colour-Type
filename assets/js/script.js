@@ -236,7 +236,7 @@ function endGame() {
     let main = document.getElementById('main');
     let answer = document.getElementById('answer');
 
-    answer.blur();
+    answer.disabled = true;
 
     // Checks score and displays corrosponding feedback message. 
     feedbackArea.style.visibility = 'visible';
@@ -259,40 +259,35 @@ function endGame() {
         main.style.opacity = '30%';
     }
 
-    // Closes feedback box when clicked or enter pressed
+    // Closes feedback box when clicked
     document.getElementById('feedback-exit').addEventListener('click', function () {
+        let disable = document.getElementsByClassName('disable');
+        for (let i = 0; i < disable.length; i++) {
+            disable[i].disabled = false;
+        }
         feedbackArea.style.visibility = 'hidden';
         main.style.opacity = '100%';
         main.style.animation = '';
+        answer.disabled = false;
         answer.focus();
     });
 
     if (window.innerWidth < 700) {
         feedbackArea.addEventListener('click', function () {
+            let disable = document.getElementsByClassName('disable');
+            for (let i = 0; i < disable.length; i++) {
+                disable[i].disabled = false;
+            }
             feedbackArea.style.visibility = 'hidden';
             main.style.opacity = '100%';
             main.style.animation = '';
+            answer.disabled = false;
+            answer.focus();
         });
     }
 
-    window.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            feedbackArea.style.visibility = 'hidden';
-            main.style.opacity = '100%';
-            main.style.animation = '';
-            answer.focus();
-            clearTimeout(timers.opacity);
-        }
-    });
-
     // Resets score
     document.getElementById('score').innerText = 0;
-
-    // Enables options
-    let disable = document.getElementsByClassName('disable');
-    for (let i = 0; i < disable.length; i++) {
-        disable[i].disabled = false;
-    }
 
     // Changes box to red to indicate game not running
     let gameLive = document.getElementById('box');
