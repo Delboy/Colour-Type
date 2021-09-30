@@ -121,6 +121,10 @@ input {
     cursor: pointer;
 }
 
+input:disabled {
+    cursor: default;
+}
+
 #mute-area {
     float: right;
     padding-right: 4em;
@@ -164,6 +168,10 @@ ul li {
     background-color: darkgray;
 }
 
+#start-btn:disabled {
+    cursor: default;
+    background-color: white;
+}
 
 #question {
     margin-top: .5em;
