@@ -135,12 +135,25 @@ input:disabled {
     margin-top: 1.5em;
 }
 
+#difficulty-options {
+    font-weight: bold;
+}
+
+.green {
+    color: darkgreen;
+}
+
+.red {
+    color: darkred;
+}
+
 ul li {
     display: inline;
 }
 
 #points {
     margin-top: .5em;
+    font-weight: bold;
 }
 
 /* Game Box*/
