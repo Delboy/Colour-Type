@@ -82,7 +82,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 ### Title
 - This title sits at the top of the page showing the user the name of the game as soon as they land on the site. Being that the game is all about colour I decided to animate the title to cycle through a bunch of different colours.
 
-<img src="assets/readme-assets/images/header.png" width="450" height="100">
+![header](assets/readme-assets/images/header.png)
 
 ### Rule Area
 - The rule area explains the rules of the game, giving two examples to aid the user. 
@@ -90,7 +90,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - If the user is on a smaller device, to save space, the rule area is initially hidden. Clicking the downward chevron next to the 'how to play' link displays the rules in the center of the screen.
 - On tablet size screens touching the 'x' in the top right corner will close the rules, whereas touching the rules anywhere on mobile size screens will close it.
 
-<img src="assets/readme-assets/images/rules.png" width="350" height="450">
+![rules](assets/readme-assets/images/rules.png)
 
 ### Options Area
 - Here the user can change the difficulty of the game and also choose whether to mute the sound or not. 
@@ -98,7 +98,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - The difficulty settings disables when the game starts and re-enables when the game ends. This is to stop the user from changing difficulty halfway through a round. 
 - The mute checkbox can be checked and unchecked at any time during play.
 
-<img src="assets/readme-assets/images/options.png" width="300" height="150">
+![options](assets/readme-assets/images/options.png)
 
 
 ### Game Area
@@ -112,7 +112,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - If the user enters a correct answer it will play a correct sound effect.
 - The timer also plays a 'ticking' sound effect every second that passes by.
 
-<img src="assets/readme-assets/images/game.png" width="300" height="300">
+![game](assets/readme-assets/images/game.png)
 
 ### Feedback Area
 - This section is hidden until the round finishes on which it will display a message to the user noting their score and possible new high score. It will also encourage them to play again. 
@@ -121,12 +121,12 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - If the user scores 0 a lose sound effect will play and the message will ask the user if they read the rules.
 - Hitting the enter/return key or clicking the feedback box will close it.
 
-<img src="assets/readme-assets/images/feedback.png" width="250" height="200"><
+![feedback](assets/readme-assets/images/feedback.png)
 
 ### Footer
 - The footer displays my name and has social links to my linkedin and github pages. This will encourage users to check out my other work or potential employers to contact me.
 
-<img src="assets/readme-assets/images/footer.png" width="300" height="50">
+![footer](assets/readme-assets/images/footer.png)
 
 ## Technologies 
 
