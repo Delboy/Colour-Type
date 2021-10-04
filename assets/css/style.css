@@ -168,6 +168,10 @@ ul li {
     text-align: center;
 }
 
+.blue {
+    color: darkblue;
+}
+
 #start-btn {
     font-family: 'Indie Flower';
     font-size: 1em;
