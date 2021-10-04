@@ -30,11 +30,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
    * [Libraries & Programs Used](#libraries-and-programs-used)
 
 - [Testing](#testing)
-   * [User stories testing](#user-stories-testing)
-   * [Validators](#validators)
-   * [Further Testing](#further-testing)
-   * [Bugs](#bugs)
-
+  
 - [Deployment](#deployment)
    * [Creation](#creation)
    * [Github pages](#github-pages)
@@ -161,70 +157,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 ## Testing
 
-### User stories Testing
-
-*As a user I want to be able to understand the rules of the game.*
-- If on desktop the user can see the rules of the game as soon as they land on the page.
-- If on smaller devices the rules are easily accessible from a dropdown menu.
-- Inside the rules two examples are given to help aid the user understand the game.
-- If the user scores 0 the feedback box at the end of the round will encourage the user to read the rules. 
-
-*As a user I want playing the game to be intuitive.*
-- The amount of controls needed for the game were kept minimal.
-- There is only one button on the entire site that the user needs which is the start button.
-- Starting the game automatically focuses the answer box meaning the user can begin punching in answers straight away withouting having to manually click it.
-- There is also a visual cue letting the user know that they can hit the enter key instead to start the game.
-
-*As a user I want feedback on how I'm scoring.*
-- Inside the game area there is a scoreboard that updates in real time.
-- Inside the game area there is a scoreboard for your highscore that updates at the end of each round.
-- Audio cues let the user know if they are answering correctly or not.
-- Visual cues such as the answer box flashing red for incorrect answers also help aid the user to how well they’re doing.
-- The feedback box at the end of the round will display your score and your highscore.
-- If the user beats their high score then the page will play a fanfare sound effect and flash the screen through multiple colours for a few seconds.
-
-*As a user I want the game to be enjoyable regardless of my skill.*
-- The user can change the difficulty in the game by reducing the amount of time they have to answer each question correctly.
-- More points are awarded for higher difficulties which encourages the user to keep playing so that they can increase their skill and eventually score higher. 
-
-*As a user I want the game to be aesthetically pleasing.* 
-- The imagery chosen was to make the site look fun and unthreatening. 
-- The theme was a school game that had been scribbled onto a whiteboard. 
-- The rules were made to look like they had been jotted down onto some scrap paper on a clipboard.
-- The font and boxes were made to look like they had been written with a whiteboard marker.
-- The game was kept very minimalistic and colours kept to a minimum for two reasons:
-1. To keep the game clear and concise with nothing to distract the user.
-2. So the colour of the word in the question would not clash with anything in its surroundings. 
-
-
-### Validators
-- HTML
-    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdelboy.github.io%2FColour-Type%2F)
-- CSS
-    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdelboy.github.io%2FColour-Type%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- JavaScript
-    - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
-    - The following metrics were returned
-    - There are 24 functions in this file.
-    - Function with the largest signature take 1 arguments, while the median is 0.
-    - Largest function has 34 statements in it, while the median is 4.
-    - The most complex function has a cyclomatic complexity value of 5 while the median is 2.
-### Further Testing
-
-- Testing was done throughout development using a combination of Chrome Developer tools and console logs. Each Time a new function was created a console log was used before the relevant code was implemented to ensure that the function was wired up correctly.
-- The site was tested on google chrome, edge, firefox and safari browsers.
-- The site was viewed on multiple devices such as desktop (including an ultra wide monitor), iphone, ipad, ipad mini, and laptop.
-- Responsiveness was tested using google chrome dev tools to check multiple device sizes.
-- All links were checked extensively to make sure they direct the user to the correct location.
-- The game was played extensively using variations of all possible options.
-- Score and highscores were checked to make sure they update correctly across all game difficulties.
-- Sound was tested to make sure nothing is played when the game is muted. 
-
-
-### Bugs
-
- - The sound effects do not sync up with the game correctly when played on a phone or tablet.
- - The background animation that triggers when you beat your high score causes distortion on some elements when viewed on a phone or tablet.
+Testing and results can be found [here](TESTING.md)
 
 ## Deployment
 
