@@ -161,6 +161,7 @@ ul li {
     width: 700px;
     height: 600px;
     font-size: 2.5em;
+    font-weight: bold;
     padding: 1em 0 0 0;
     background: url(../images/box.png)no-repeat;
     background-size: 700px 600px;
@@ -207,6 +208,18 @@ ul li {
 
 #timer {
     margin-top: .5em;
+}
+
+#game-time {
+    color: darkred;
+}
+
+#score {
+    color: darkgreen;
+}
+
+#highscore {
+    color: darkblue;
 }
 
 .score {
