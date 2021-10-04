@@ -207,6 +207,7 @@ Testing and results can be found [here](TESTING.md)
 - I learnt how to give font an outline on this thread on [stackoverflow.com](https://stackoverflow.com/questions/4919076/outline-effect-to-text).
 - I used [W3schools.com](https://www.w3schools.com/css/css3_animations.asp) to learn about animations which I used for the title, and for the colour changing backgrounds.
 - I used [Flexboxfroggy.com](https://flexboxfroggy.com/) to learn how to use flexbox.
+- I learnt how to hide code but still have it visible to screen readers from [W3.org](https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements). 
 
 ### Media
 - All sounds were sourced from [Freesounds.org](https://freesound.org/).

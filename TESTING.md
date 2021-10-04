@@ -18,6 +18,7 @@
     - Function with the largest signature take 1 arguments, while the median is 0.
     - Largest function has 34 statements in it, while the median is 4.
     - The most complex function has a cyclomatic complexity value of 5 while the median is 2.
+- Lighthouse 
 
 ## User stories Testing
 

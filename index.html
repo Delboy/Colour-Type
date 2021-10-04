@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A fun game that incorporates ‘the stroop test’, which shows our tendency to experience difficulty naming a physical color when it is used to spell the name of a different color.">
+    <meta name="keywords" content="colour type, stroop test, fun, game, colour game, type game">
+    <meta name ="author" content="Derek de Goey">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -46,7 +49,7 @@
                     </div>
                     <!-- Difficutly options -->
                     <div id="difficulty">
-                        <h3>Difficulty :</h3>
+                        <p>Difficulty :</p>
                         <ul id="difficulty-options">
                             <li><label for="easy" class="green">Easy - No timer</label>
                                 <input type="radio" id="easy" class="option disable" name="difficulty"></li>
@@ -66,6 +69,7 @@
                     <button id="start-btn" class="disable" >Start Game</button>
                     <p id="question">Type the <span id="cond1">colour</span> <span id="cond2"> Blue</span></p>
                     <input type="text" id="answer" autocomplete="off">
+                    <label for="answer" id="answer-label">Answer Here</label>
                     <p id="timer">Time left: <span id="game-time">20</span> seconds</p>
                     <div id="score-area">
                         <p class="score">Current Score: <span id="score">00</span></p>
@@ -79,9 +83,9 @@
         <footer>
             <p>Created by Derek de Goey</p>
                 <div id="social-links">
-                <a href="https://github.com/Delboy" target="_blank" rel="noopener"><i
+                <a href="https://github.com/Delboy" aria-label="github" target="_blank" rel="noopener"><i
                         class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/derek-de-goey" target="_blank" rel="noopener"><i
+                <a href="https://linkedin.com/in/derek-de-goey" aria-label="linkedin" target="_blank" rel="noopener"><i
                         class="fab fa-linkedin"></i></a>
                 </div>
         </footer>
