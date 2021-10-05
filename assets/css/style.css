@@ -10,6 +10,11 @@
     border: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     max-width: 100%;
     display: flex;

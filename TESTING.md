@@ -82,37 +82,91 @@
 
 - Checked if clicking downward chevron opens rules on both phone and tablet screen sizes.
 - Checked if the close button works on rules for tablets.
+
+![open close rules](assets/readme-assets/gifs/rules_open_close.gif)
+
 - Checked if touching/clicking anywhere inside rules closes it on phone screens. <em>*note bugs</em>
+
+![open close rules mobile](assets/readme-assets/gifs/rules_open_close_mobile.gif)
+
 - Checked that clicking the downward chevron whilst the game is running still brings up the rules.
+
+![open close rules whilst playing](assets/readme-assets/gifs/rules_open_close_play.gif)
+
 - Checked that when the feedback box is showing and the downward chevron is clicked that it still brings up rules but keeps them behind the feedback box.
+
+![open close rules when feeback open](assets/readme-assets/gifs/rules_open_close_fb.gif)
+
 - Checked that the click sound effect played when opening/closing rules if the game is unmuted.
 
 ### Options Area
 
 - Selected each difficulty option and checked how long each question stayed on screen before changing, making sure it matches what was intended.
+
+![difficulty timer check](assets/readme-assets/gifs/difficulty_timer_check.gif)
+
 - Checked that the difficulty couldnt be changed whilst the game was active.
+
+![difficulty disabled](assets/readme-assets/gifs/difficulty_disabled.gif)
+
+- Checked that mute box was clickable at all times. 
+
+![mute toggle](assets/readme-assets/gifs/mute_toggle.gif)
+
+- Checked that toggling mute box during play enabled and disabled sounds.
+- Checked that the answer box is focused after changing any options.
 - Checked that all sounds didn't play whilst mute box was checked.
 - Checked that all sounds played whilst mute box was unchecked.
-- Checked that toggling mute box during play enabled and disabled sounds.
-- Checked that mute box was clickable at all times. 
-- Checked that the answer box is focused after changing any options.
 
 ### Game Area
 
-- Checked that the 'start game' button is focused when the page loads.
 - Checked if clicking the 'start game' button began the game.
+
+![start game](assets/readme-assets/gifs/start_game.gif)
+
 - Checked that the 'start game' button wasn't clickable whilst game was already running.
+
+![start game](assets/readme-assets/gifs/start_game_disabled.gif)
+
+- Checked that the question consistently randomised the word and its colour.
+
+![random](assets/readme-assets/gifs/random.gif)
+
+- If answer is incorrect checked that the answer box was cleared, flashed red and the incorrect sound effect was played.
+
+![incorrect](assets/readme-assets/gifs/incorrect.gif)
+
+- If answer is correct checked that the answer box was cleared, score increased inline with difficulty chosen, and the correct sound effect was played.
+
+![correct](assets/readme-assets/gifs/correct.gif)
+
+- Checked that the answer box was not caps-sensitve.
+
+![caps](assets/readme-assets/gifs/caps.gif)
+
+- Checked that the game timer counted down from 20 correctly.
+
+![timer](assets/readme-assets/gifs/timer.gif)
+
+
+- Checked that when a question was answered correctly the current score increased inline with the difficulty chosen.
+
+![easy points](assets/readme-assets/gifs/easy_points.gif)
+![normal points](assets/readme-assets/gifs/normal_points.gif)
+![hard points](assets/readme-assets/gifs/hard_points.gif)
+
+- Checked that the current score reset after the game ends.
+
+![score reset](assets/readme-assets/gifs/score_reset.gif)
+
+- Checked that the high score updated if beaten once the game ended. 
+
+![highscore update](assets/readme-assets/gifs/highscore_update.gif)
+
+- Checked that the 'start game' button is focused when the page loads.
 - Checked that hitting the Enter key functioned the same as clicking the 'start game' button if the answer box is focused and the game was not already running.
 - Checked that typing an answer into the answer box and hitting enter ran the function that checked if the answer is correct.
-- Checked that the question consistently randomised the word and its colour.
-- If answer is incorrect checked that the answer box was cleared, flashed red and the incorrect sound effect was played.
-- If answer is correct checked that the answer box was cleared, score increased inline with difficulty chosen, and the correct sound effect was played.
-- Checked that the answer box was not caps-sensitve.
-- Checked that the game timer counted down from 20 correctly.
 - Checked that the tick sound effect played in time with the time-left counter if the game is unmuted.
-- Checked that when a question was answered correctly the current score increased inline with the difficulty chosen.
-- Checked that the current score reset after the game ends.
-- Checked that the high score updated if beaten once the game ended. 
 - Checked that the win sound effect plays if highscore was not beaten.
 - Checked that the fanfare sound effect plays if highscore was beaten.
 - Checked that the lose sound effect plays if the user scores zero.
@@ -120,18 +174,34 @@
 ### Feedback Area
 
 - Checked that the feedback box appears after the game ends.
-- Checked that the game could not be started when the feedback box is visible.
 - Checked that clicking the feedback box close button closes the box.
+
+![feedback show and close](assets/readme-assets/gifs/feedback_show_and_close.gif)
+
+
 - Checked that clicking the feedback box on phone size screens closed it.
+
+![feedback close phone](assets/readme-assets/gifs/feedback_close_phone.gif)
+
+
 - Checked that the feedback box message reflects what the users scored.
 - Check that the feedback box displays the correct message depending on the user's actions.
 - Checked that the main game area is greyed out whilst the feedback box is visible and returns to normal once closed.
+
+![feedback score and greyed background](assets/readme-assets/gifs/score_msg_greyed.gif)
+
 - Checked that the background colour animation plays only if the high score is beaten.
+
+![high score animation](assets/readme-assets/gifs/highscore_animation.gif)
+
+- Checked that the game could not be started when the feedback box is visible.
 
 ### Footer
 
 - Checked that the social links aren't broken.
 - Checked that the social links open a separate browser window.
+
+![social links](assets/readme-assets/gifs/social_links.gif)
 
 ## Further Testing
 
