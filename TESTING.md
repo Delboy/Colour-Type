@@ -47,8 +47,7 @@
 ![rules](assets/readme-assets/images/rules.png)misc
 
 *As a user I want playing the game to be intuitive.*
-- The amount of controls needed for the game were kept minimal.
-- There is only one button on the entire site that the user needs which is the start button.
+- The amount of controls needed for the game were kept minimal. There is only one button on the entire site that the user needs which is the start button.
 - Starting the game automatically focuses the answer box meaning the user can begin punching in answers straight away withouting having to manually click it.
 - There is also a visual cue letting the user know that they can hit the enter key instead to start the game.
 
@@ -106,7 +105,7 @@
 
 - Checked that when the feedback box is showing and the downward chevron is clicked that it still brings up rules but keeps them behind the feedback box.
 
-![open close rules when feeback open](assets/readme-assets/gifs/rules_open_close_fb.gif)
+![open close rules when feedback open](assets/readme-assets/gifs/rules_open_close_fb.gif)
 
 - Checked that the click sound effect played when opening/closing rules if the game is unmuted.
 
@@ -135,7 +134,7 @@
 
 ![start game](assets/readme-assets/gifs/start_game.gif)
 
-- Checked that the 'start game' button wasn't clickable whilst game was already running.
+- Checked that the 'start game' button wasn't clickable whilst the game was already running.
 
 ![start game disabled](assets/readme-assets/gifs/start_game_disabled.gif)
 
@@ -147,15 +146,15 @@
 
 ![random](assets/readme-assets/gifs/random.gif)
 
-- If answer is incorrect checked that the answer box was cleared, flashed red and the incorrect sound effect was played.
+- If the answer is incorrect, checked that the answer box was cleared, flashed red and the incorrect sound effect was played.
 
 ![incorrect](assets/readme-assets/gifs/incorrect.gif)
 
-- If answer is correct checked that the answer box was cleared, score increased inline with difficulty chosen, and the correct sound effect was played.
+- If the answer is correct, checked that the answer box was cleared, score increased inline with difficulty chosen, and the correct sound effect was played.
 
 ![correct](assets/readme-assets/gifs/correct.gif)
 
-- Checked that the answer box was not caps-sensitve.
+- Checked that the answer box was not case-sensitve.
 
 ![caps](assets/readme-assets/gifs/caps.gif)
 

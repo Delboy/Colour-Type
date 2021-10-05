@@ -121,7 +121,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - If the user scores a new highscore a fanfare sound effect will play and the page will briefly flash through a range of colours.
 - If the user doesn't beat their highscore a win sound effect will play.
 - If the user scores 0 a lose sound effect will play and the message will ask the user if they read the rules.
-- If the user is using a tablet they can close the feeback box by touching the 'x' in the top right corner.
+- If the user is using a tablet they can close the feedback box by touching the 'x' in the top right corner.
 - If the user is using a phone they can close the feedback box by touching it anywhere.
 
 ![feedback](assets/readme-assets/images/feedback.png)
@@ -158,7 +158,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 - [TinyJPG](https://tinyjpg.com/)
     - I used TinyJPG to reduce the size of my images to reduce load times.
 - [Screen To Gif](https://www.screentogif.com/)
-    - I used Screen to gif to create the gifs used in my readme.
+    - I used Screentogif.com to create the gifs used in my readme.
 
 ## Testing
 
