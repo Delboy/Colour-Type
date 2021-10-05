@@ -1,3 +1,5 @@
+# Colour Type - Testing
+
 ## Contents 
 
 - [Validators](#validators)
@@ -8,6 +10,7 @@
     * [Game Area](#game-area)
     * [Feedback Area](#feedback-area)
     * [Footer](#footer)
+    * [Misc](#misc)
 - [Further Testing](#further-testing)
 - [Bugs](#bugs)
 
@@ -19,17 +22,19 @@
     - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdelboy.github.io%2FColour-Type%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 - JavaScript
+    - No errors were found when passing through [Jshint](https://jshint.com/)
 
    ![jshint](assets/readme-assets/images/jshint.png)
 
 - Lighthouse 
-    * Desktop 
+    - No issues with lighthouse on both desktop and mobile.
+        * Desktop 
 
-    ![Lighthouse desktop results](assets/readme-assets/images/lighthouse-desktop.png)
+        ![Lighthouse desktop results](assets/readme-assets/images/lighthouse-desktop.png)
 
-    * Mobile
+        * Mobile
 
-    ![Lighthouse mobile results](assets/readme-assets/images/lighthouse-mobile.png)
+        ![Lighthouse mobile results](assets/readme-assets/images/lighthouse-mobile.png)
 
 ## User stories Testing
 
@@ -77,6 +82,12 @@
 ![complete](assets/readme-assets/images/complete.png)
 
 ## Feature Testing
+
+### Header
+
+- Checked if clicking header refreshed the page.
+
+![header refresh](assets/readme-assets/gifs/header_refresh.gif)
 
 ### Rules Area
 
@@ -126,7 +137,11 @@
 
 - Checked that the 'start game' button wasn't clickable whilst game was already running.
 
-![start game](assets/readme-assets/gifs/start_game_disabled.gif)
+![start game disabled](assets/readme-assets/gifs/start_game_disabled.gif)
+
+- Checked that the 'start game' button changed colour when hovered over.
+
+![start game hover](assets/readme-assets/gifs/start_hover.gif)
 
 - Checked that the question consistently randomised the word and its colour.
 
@@ -202,6 +217,16 @@
 - Checked that the social links open a separate browser window.
 
 ![social links](assets/readme-assets/gifs/social_links.gif)
+
+### Misc
+
+- Checked that site was responsive
+
+![responsive](assets/readme-assets/gifs/responsivness.gif)
+
+- Checked that the cursor turned to a pointer when hovering over a clickable element
+
+![pointer](assets/readme-assets/gifs/pointer.gif)
 
 ## Further Testing
 

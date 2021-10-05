@@ -62,7 +62,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 ## Design
 
 ### Colour Scheme
-- I wanted to keep the colour scheme plain and simple so as to not distract the user from the colouring of the question word. I liked the idea of the game looking like it was scribbled on a white board so I kept the main colours of the site black and white. 
+- I wanted to keep the colour scheme plain and simple so as to not distract the user from the colouring of the word in the question. I liked the idea of the game looking like it was scribbled on a white board so I kept the colours the same as typical white board markers, black, green, red and blue. 
 ### Typography
 - The game uses 'indie flower' as its main font as it has a whiteboard pen-like handwriting quality which gives the page a school game feel. With the title I used 'Special Elite' for its typewriter look. I thought it suited the name of the game pretty well as your 'typing' out words. Sans sarif was used as a fallback font incase of any problems loading the page.
 ### Imagery
@@ -82,7 +82,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 ### Title
 - This title sits at the top of the page showing the user the name of the game as soon as they land on the site. Being that the game is all about colour I decided to animate the title to cycle through a bunch of different colours.
 
-![header](assets/readme-assets/images/header.png)
+![header](assets/readme-assets/gifs/header.gif)
 
 ### Rule Area
 - The rule area explains the rules of the game, giving two examples to aid the user. 
@@ -154,6 +154,8 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
     - To troubleshoot with the console, change code before implementing, and to test responsiveness. 
 - [TinyJPG](https://tinyjpg.com/)
     - I used TinyJPG to reduce the size of my images to reduce load times.
+- [Screen To Gif](https://www.screentogif.com/)
+    - I used Screen to gif to create the gifs used in my readme.
 
 ## Testing
 
