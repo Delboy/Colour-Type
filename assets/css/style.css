@@ -325,7 +325,7 @@ footer p {
     color: black;
 }
 
-/* Media Queries */
+/********** Media Queries **********/
 
 @media screen and (max-width: 1490px) {
 
@@ -433,7 +433,7 @@ footer p {
     }
 
     #difficulty {
-        margin: 20px 0 0 25px;
+        margin: 20px 0 0 20px;
     }
 
     #difficulty input {
@@ -463,6 +463,10 @@ footer p {
         margin-right: 10px;
         margin-bottom: 0;
         ;
+    }
+
+    #question {
+        font-size: 1.25em;
     }
 
     /* Footer */
