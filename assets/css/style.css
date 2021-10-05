@@ -42,8 +42,7 @@ h1 {
     font-size: 5em;
     text-align: center;
     margin: 25px 0 0;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    /* code taken from here https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* code taken from here https://stackoverflow.com/questions/4919076/outline-effect-to-text */
     animation: color-change 10s infinite;
 }
 
@@ -64,7 +63,6 @@ h1 {
     100% {
         color: rgb(241, 107, 107);
     }
-
 }
 
 /* Rules*/
@@ -204,8 +202,7 @@ ul li {
 }
 
 #cond2 {
-    /* code taken from https://stackoverflow.com/questions/4919076/outline-effect-to-text */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* code taken from https://stackoverflow.com/questions/4919076/outline-effect-to-text */
 }
 
 #answer {
@@ -216,7 +213,6 @@ ul li {
     border-radius: 5px;
     box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
 }
-
 
 /* code taken from https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements */
 #answer-label {
@@ -324,10 +320,6 @@ footer p {
 #social-links {
     font-size: 48px;
     margin-left: .25em;
-}
-
-.fab {
-    color: black;
 }
 
 /********** Media Queries **********/

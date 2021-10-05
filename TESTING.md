@@ -44,7 +44,7 @@
 - Inside the rules two examples are given to help aid the user understand the game.
 - If the user scores 0 the feedback box at the end of the round will encourage the user to read the rules. 
 
-![rules](assets/readme-assets/images/rules.png)
+![rules](assets/readme-assets/images/rules.png)misc
 
 *As a user I want playing the game to be intuitive.*
 - The amount of controls needed for the game were kept minimal.
