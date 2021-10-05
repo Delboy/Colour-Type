@@ -1,10 +1,15 @@
 ## Contents 
 
-   * [Validators](#validators)
-   * [User stories testing](#user-stories-testing)
-   * [Feature Testing](#feature-testing)
-   * [Further Testing](#further-testing)
-   * [Bugs](#bugs)
+- [Validators](#validators)
+- [User stories testing](#user-stories-testing)
+- [Feature Testing](#feature-testing)
+    * [Rules Area](#rules-area)
+    * [Options Area](#options-area)
+    * [Game Area](#game-area)
+    * [Feedback Area](#feedback-area)
+    * [Footer](#footer)
+- [Further Testing](#further-testing)
+- [Bugs](#bugs)
 
 ## Validators
 - HTML
@@ -15,18 +20,16 @@
 
 - JavaScript
 
-   * ![jshint](assets/readme-assets/images/jshint.png)
+   ![jshint](assets/readme-assets/images/jshint.png)
 
 - Lighthouse 
-    - Desktop 
+    * Desktop 
 
-    * ![Lighthouse desktop results](assets/readme-assets/images/lighthouse-desktop.png)
+    ![Lighthouse desktop results](assets/readme-assets/images/lighthouse-desktop.png)
 
-    - Mobile
+    * Mobile
 
-    * ![Lighthouse mobile results](assets/readme-assets/images/lighthouse-mobile.png)
-
-The only thing that seems to be affecting the lighthouse results negatively seems to be server side which is out of my control.
+    ![Lighthouse mobile results](assets/readme-assets/images/lighthouse-mobile.png)
 
 ## User stories Testing
 
@@ -75,7 +78,7 @@ The only thing that seems to be affecting the lighthouse results negatively seem
 
 ## Feature Testing
 
-### Rules
+### Rules Area
 
 - Checked if clicking downward chevron opens rules on both phone and tablet screen sizes.
 - Checked if the close button works on rules for tablets.
@@ -84,7 +87,7 @@ The only thing that seems to be affecting the lighthouse results negatively seem
 - Checked that when the feedback box is showing and the downward chevron is clicked that it still brings up rules but keeps them behind the feedback box.
 - Checked that the click sound effect played when opening/closing rules if the game is unmuted.
 
-### Options
+### Options Area
 
 - Selected each difficulty option and checked how long each question stayed on screen before changing, making sure it matches what was intended.
 - Checked that the difficulty couldnt be changed whilst the game was active.
@@ -114,7 +117,7 @@ The only thing that seems to be affecting the lighthouse results negatively seem
 - Checked that the fanfare sound effect plays if highscore was beaten.
 - Checked that the lose sound effect plays if the user scores zero.
 
-### Feedback 
+### Feedback Area
 
 - Checked that the feedback box appears after the game ends.
 - Checked that the game could not be started when the feedback box is visible.
@@ -136,11 +139,6 @@ The only thing that seems to be affecting the lighthouse results negatively seem
 - The site was tested on google chrome, edge, firefox and safari browsers.
 - The site was viewed on multiple devices such as desktop (including an ultra wide monitor), iphone, ipad, ipad mini, and laptop.
 - Responsiveness was tested using google chrome dev tools to check multiple device sizes.
-- All links were checked extensively to make sure they direct the user to the correct location.
-- The game was played extensively using variations of all possible options.
-- Score and highscores were checked to make sure they update correctly across all game difficulties.
-- Sound was tested to make sure nothing is played when the game is muted. 
-
 
 ### Bugs
 
