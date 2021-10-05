@@ -213,6 +213,7 @@ Testing and results can be found [here](TESTING.md)
 - I used [W3schools.com](https://www.w3schools.com/css/css3_animations.asp) to learn about animations which I used for the title, and for the colour changing backgrounds.
 - I used [Flexboxfroggy.com](https://flexboxfroggy.com/) to learn how to use flexbox.
 - I learnt how to hide code but still have it visible to screen readers from [W3.org](https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements). 
+- I fixed a bug finding help from [this](https://stackoverflow.com/questions/5937339/ipad-safari-make-keyboard-disappear) thread on [Stackoverflow.com](https://stackoverflow.com).
 
 ### Media
 - All sounds were sourced from [Freesounds.org](https://freesound.org/).

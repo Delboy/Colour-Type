@@ -237,6 +237,7 @@ function endGame() {
     let answer = document.getElementById('answer');
 
     answer.disabled = true;
+    document.activeElement.blur(); // Code taken from https://stackoverflow.com/questions/5937339/ipad-safari-make-keyboard-disappear
 
     // Checks score and displays corrosponding feedback message. 
     feedbackArea.style.visibility = 'visible';
