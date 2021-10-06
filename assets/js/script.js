@@ -271,6 +271,7 @@ function endGame() {
         main.style.animation = '';
         answer.disabled = false;
         answer.focus();
+        clearTimeout(timers.opacity);
     });
 
     if (window.innerWidth < 700) {
@@ -284,6 +285,7 @@ function endGame() {
             main.style.animation = '';
             answer.disabled = false;
             answer.focus();
+            clearTimeout(timers.opacity);
         });
     }
 
