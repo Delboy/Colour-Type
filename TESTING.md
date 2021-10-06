@@ -154,7 +154,7 @@
 
 ![correct](assets/readme-assets/gifs/correct.gif)
 
-- Checked that the answer box was not case-sensitve.
+- Checked that the answer box was not case-sensitive.
 
 ![caps](assets/readme-assets/gifs/caps.gif)
 
@@ -234,8 +234,15 @@
 - The site was viewed on multiple devices such as desktop (including an ultra wide monitor), iphone, ipad, ipad mini, and laptop.
 - Responsiveness was tested using google chrome dev tools to check multiple device sizes.
 
-### Bugs
+## Bugs
 
+### Fixed 
+ - When playing in 'easy' the round timer wouldn't stop. I fixed this by making the round timer in easy 20 seconds which is the length of the game.
+ - When playing on iphone or ipad you could restart the game when it ended by pressing the return key even when the feedback box was still visible. Fixed this by making the keyboard disappear when the game ends.
+ - If the user beat their high score, then quickly closed the feedback box before the animation ended, the pages opacity would change to 30% after a few seconds. Fixed this by resetting the opacity timer when the feedback box is closed.
+ - Had multiple issues with the mute checkbox not working well with the countdown timer sound effect. Originally I had a long sound effect that played once when the game started. Had bugs where the sound would play if the mute box was toggled when the game wasn't running. Had issues where the sound would double in volume when toggled on after round 1. Fixed all these issues by changing the sound to a 1 second 'tick' and triggering it every time the countdown timer ticks down by one.
+
+### Remaining
  - The sound effects do not sync up with the game correctly when played on a phone or tablet.
  - The background animation that triggers when you beat your high score causes distortion on some elements when viewed on a phone or tablet.
  - *When using chrome dev tools if you resize the page to under 700px then you have to refresh the page for the rule section to close when clicked/touched.

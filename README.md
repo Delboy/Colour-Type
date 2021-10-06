@@ -25,6 +25,7 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
    * [Game Area](#game-area)
    * [Feedback Area](#feedback-area)
    * [Footer](#footer)
+   * [Features to add](#features-to-add)
 
 - [Technologies](#technologies)
    * [Languages used](#languages-used)
@@ -131,6 +132,13 @@ Colour Type is a game that is inspired by a neuropsychological test called the s
 
 ![footer](assets/readme-assets/images/footer.png)
 
+## Features to add
+
+- A consistent scoreboard where users can enter their initials.
+- More game modes. For example a mode where the question only appears on screen briefly.
+- A colour 'touch' mode where instead of typing the answer you have a button for each colour to click.
+- A colour 'speak' mode where instead of typing the answer you say the answer into a mic.
+
 ## Technologies 
 
 ### Languages Used
@@ -209,7 +217,7 @@ Testing and results can be found [here](TESTING.md)
 
 ### Code
 - I learnt how to add audio from this thread on [stackoverflow.com](https://stackoverflow.com/questions/9419263/how-to-play-audio).
-- I learnt how to give font an outline on this thread on [stackoverflow.com](https://stackoverflow.com/questions/4919076/outline-effect-to-text).
+- I learnt how to give fonts an outline on this thread on [stackoverflow.com](https://stackoverflow.com/questions/4919076/outline-effect-to-text).
 - I used [W3schools.com](https://www.w3schools.com/css/css3_animations.asp) to learn about animations which I used for the title, and for the colour changing backgrounds.
 - I used [Flexboxfroggy.com](https://flexboxfroggy.com/) to learn how to use flexbox.
 - I learnt how to hide code but still have it visible to screen readers from [W3.org](https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements). 

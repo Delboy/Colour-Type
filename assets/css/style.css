@@ -42,7 +42,8 @@ h1 {
     font-size: 5em;
     text-align: center;
     margin: 25px 0 0;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* code taken from here https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    /* text shadow code taken from here https://stackoverflow.com/questions/4919076/outline-effect-to-text */
     animation: color-change 10s infinite;
 }
 
@@ -202,7 +203,8 @@ ul li {
 }
 
 #cond2 {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* code taken from https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    /* text shadow code taken from https://stackoverflow.com/questions/4919076/outline-effect-to-text */
 }
 
 #answer {
